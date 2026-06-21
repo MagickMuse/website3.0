@@ -337,12 +337,17 @@ ul { list-style: none; }
   min-height: 600px;
 }
 .intro__image-col {
-  position: relative;
   overflow: hidden;
 }
 .intro__img-wrap {
-  position: absolute;
-  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.intro__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 .intro__text-col {
   background: var(--ash-mid);
@@ -649,7 +654,8 @@ ul { list-style: none; }
 }
 .philosophy--reverse { direction: rtl; }
 .philosophy--reverse > * { direction: ltr; }
-.philosophy__img-col { overflow: hidden; max-height: 560px; }
+.philosophy__img-col { overflow: hidden; }
+.philosophy__img-col img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .philosophy__text-col {
   background: var(--ash-mid);
   padding: clamp(3rem, 6vw, 6rem);

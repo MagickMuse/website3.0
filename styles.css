@@ -1042,9 +1042,8 @@ ul { list-style: none; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  background:
-    url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1800&q=80')
-    center center / cover no-repeat;
+  background: var(--ash);
+  overflow: hidden;
 }
 .page-hero__overlay {
   position: absolute;

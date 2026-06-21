@@ -558,17 +558,18 @@ ul { list-style: none; }
   transition: transform 0.3s var(--ease);
 }
 .grimoire-card:hover { transform: translateY(-4px); }
-.grimoire-card__icon {
-  height: 140px;
+.grimoire-card__body { padding: 1.2rem 1.2rem 1.4rem; }
+.grimoire-card__header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  background: var(--ash-mid);
-  border-bottom: 1px solid var(--ash-light);
-  color: var(--cream);
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
 }
-.grimoire-card__body { padding: 1rem 1.2rem 1.4rem; }
+.grimoire-card__header i {
+  font-size: 1.3rem;
+  color: var(--blush);
+  flex-shrink: 0;
+}
 .grimoire-card__body h4 {
   font-family: var(--ff-serif);
   font-size: 0.85rem;

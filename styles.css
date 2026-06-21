@@ -136,9 +136,10 @@ ul { list-style: none; }
   font-family: var(--ff-logo);
   font-size: clamp(0.75rem, 1.2vw, 1rem);
   letter-spacing: 0.1em;
-  color: var(--cream);
+  color: var(--blush);
   white-space: nowrap;
   flex-shrink: 0;
+  text-transform: lowercase;
 }
 .nav__links {
   display: flex;

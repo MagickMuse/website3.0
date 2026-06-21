@@ -917,9 +917,10 @@ ul { list-style: none; }
   padding-bottom: 3rem;
 }
 .footer__logo {
-  font-family: var(--ff-logo);
-  font-size: 1rem;
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--cream);
   margin-bottom: 0.4rem;
 }

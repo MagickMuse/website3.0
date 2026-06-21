@@ -16,6 +16,7 @@
   --ash-light: #5C4040;
   --text:      #2A1F1F;
 
+  --ff-logo:    'Magic Retro', serif;
   --ff-display: 'Cinzel Decorative', serif;
   --ff-serif:   'Cinzel', serif;
   --ff-body:    'EB Garamond', serif;
@@ -132,7 +133,7 @@ ul { list-style: none; }
   padding-bottom: 0.75rem;
 }
 .nav__logo {
-  font-family: var(--ff-display);
+  font-family: var(--ff-logo);
   font-size: clamp(0.75rem, 1.2vw, 1rem);
   letter-spacing: 0.1em;
   color: var(--cream);
@@ -875,7 +876,7 @@ ul { list-style: none; }
   padding-bottom: 3rem;
 }
 .footer__logo {
-  font-family: var(--ff-display);
+  font-family: var(--ff-logo);
   font-size: 1rem;
   letter-spacing: 0.08em;
   color: var(--cream);

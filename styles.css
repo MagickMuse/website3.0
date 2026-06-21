@@ -1226,6 +1226,13 @@ ul { list-style: none; }
   font-size: 0.75rem;
   top: 0.45em;
 }
+.article__body a {
+  color: var(--blush);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+.article__body a:hover { opacity: 0.75; }
 .article__body strong {
   color: var(--cream);
   font-weight: 500;

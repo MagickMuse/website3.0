@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Magick Mastery: Guides &amp; Blog</title>
   <meta name="description" content="Guides, research notes, and deep dives into the craft. Educational resources from The Magick Muse." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Magick Muse" />
+  <meta property="og:title" content="Magick Mastery: Guides & Blog | The Magick Muse" />
+  <meta property="og:description" content="Guides, research notes, and deep dives into the craft. Educational resources from The Magick Muse." />
+  <meta property="og:url" content="https://themagickmuse.co/mastery.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=1200&auto=format&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Magick Mastery: Guides & Blog | The Magick Muse" />
+  <meta name="twitter:description" content="Guides, research notes, and deep dives into the craft. Educational resources from The Magick Muse." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=1200&auto=format&fit=crop" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cinzel:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -53,7 +63,12 @@
       <p class="eyebrow text-center">Latest Posts</p>
       <h2 class="section-title text-center">From the <em>Manuscript</em></h2>
 
-      <div class="posts__grid">
+      <div class="mastery-search">
+        <input type="search" class="mastery-search__input" placeholder="Search posts..." aria-label="Search posts" id="masterySearch" />
+      </div>
+      <p class="mastery-no-results" id="masteryNoResults">No posts containing those keywords exist at the moment.</p>
+
+      <div class="posts__grid" id="postsGrid">
 
         <article class="post-card">
           <div class="post-card__img">
@@ -143,18 +158,6 @@
     </div>
   </section>
 
-  <!-- EMAIL -->
-  <section class="email-signup">
-    <div class="container email-signup__inner">
-      <h2>New guides, straight to your inbox.</h2>
-      <p>Subscribe to get new Mastery posts as they drop.</p>
-      <form class="email-signup__form" onsubmit="return false;">
-        <input type="email" placeholder="Your email address" aria-label="Email address" />
-        <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
-      </form>
-    </div>
-  </section>
-
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
@@ -175,6 +178,7 @@
             <li><a href="manuscript.html">Manuscript</a></li>
             <li><a href="meetup.html">Muses</a></li>
             <li><a href="mastery.html">Mastery</a></li>
+            <li><a href="story.html">Our Story</a></li>
           </ul>
         </div>
       </nav>
@@ -191,6 +195,23 @@
     });
     document.querySelector('.nav__toggle').addEventListener('click', () => {
       document.querySelector('.nav__links').classList.toggle('nav__links--open');
+    });
+
+    const searchInput = document.getElementById('masterySearch');
+    const postsGrid = document.getElementById('postsGrid');
+    const noResults = document.getElementById('masteryNoResults');
+    const cards = Array.from(postsGrid.querySelectorAll('.post-card'));
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        const show = !q || text.includes(q);
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      noResults.style.display = visible === 0 ? 'block' : 'none';
     });
   </script>
 </body>

@@ -1258,5 +1258,102 @@ ul { list-style: none; }
   margin-bottom: 1rem;
 }
 
+/* ── MASTERY SEARCH ── */
+.mastery-search {
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+}
+.mastery-search__input {
+  width: 100%;
+  background: var(--ash-mid);
+  border: 1px solid var(--ash-light);
+  border-radius: 4px;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  color: var(--cream);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.mastery-search__input::placeholder { color: rgba(245,239,230,0.4); }
+.mastery-search__input:focus { border-color: var(--blush); }
+.mastery-no-results {
+  display: none;
+  text-align: center;
+  font-family: var(--ff-body);
+  font-size: 1.05rem;
+  color: rgba(245,239,230,0.55);
+  font-style: italic;
+  padding: 2rem 0 3rem;
+}
+
+/* ── RELATED POSTS ── */
+.related-posts {
+  border-top: 1px solid var(--ash-light);
+  padding: 3rem 0 4rem;
+}
+.related-posts__inner {
+  max-width: 960px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+.related-posts__title {
+  font-family: var(--ff-serif);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blush);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.related-posts__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 700px) {
+  .related-posts__grid { grid-template-columns: 1fr; }
+}
+.related-card {
+  background: var(--ash-mid);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s var(--ease);
+  position: relative;
+}
+.related-card:hover { transform: translateY(-4px); cursor: pointer; }
+.related-card__img {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.related-card__img img { width: 100%; height: 100%; object-fit: cover; }
+.related-card__body {
+  padding: 1rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.related-card__tag {
+  font-family: var(--ff-serif);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blush);
+}
+.related-card__title {
+  font-family: var(--ff-serif);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cream);
+  line-height: 1.4;
+}
+.related-card__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
 /* ── UTILITY ── */
 @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }

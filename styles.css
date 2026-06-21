@@ -835,12 +835,12 @@ ul { list-style: none; }
   justify-content: center;
   width: 2rem;
   height: 2rem;
-  border: 1px solid var(--ash-light);
+  border: none;
   color: rgba(245,239,230,0.6);
   font-size: 0.4rem;
-  transition: border-color 0.2s, color 0.2s;
+  transition: color 0.2s;
 }
-.social-links a:hover { border-color: var(--blush); color: var(--blush); }
+.social-links a:hover { color: var(--blush); }
 .social-icon { width: 0.9rem; height: 0.9rem; object-fit: contain; display: block; opacity: 0.75; transition: opacity 0.2s; }
 .social-links a:hover .social-icon { opacity: 1; }
 

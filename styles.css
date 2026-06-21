@@ -133,9 +133,10 @@ ul { list-style: none; }
   padding-bottom: 0.75rem;
 }
 .nav__logo {
-  font-family: var(--ff-logo);
-  font-size: clamp(0.75rem, 1.2vw, 1rem);
-  letter-spacing: 0.1em;
+  font-family: var(--ff-display);
+  font-size: clamp(0.65rem, 1vw, 0.85rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--blush);
   white-space: nowrap;
   flex-shrink: 0;

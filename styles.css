@@ -1153,6 +1153,11 @@ ul { list-style: none; }
   color: rgba(245,239,230,0.68);
   flex: 1;
 }
+.post-card__body .btn--ghost {
+  align-self: center;
+  color: var(--blush);
+  border-color: var(--blush);
+}
 
 @media (max-width: 768px) { .posts__grid { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 520px) { .posts__grid { grid-template-columns: 1fr; } }

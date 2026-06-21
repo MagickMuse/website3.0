@@ -1155,7 +1155,8 @@ ul { list-style: none; }
 }
 .post-card__body .btn--ghost {
   align-self: center;
-  color: var(--blush);
+  background: var(--blush);
+  color: var(--cream);
   border-color: var(--blush);
 }
 

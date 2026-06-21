@@ -555,7 +555,7 @@ ul { list-style: none; }
   background: rgba(245,239,230,0.15);
   flex-shrink: 0;
 }
-@media (max-width: 520px) { .numbers__grid { flex-direction: column; } .numbers__divider { width: 80px; height: 1px; } }
+@media (max-width: 640px) { .numbers__grid { flex-direction: column; } .numbers__divider { width: 80px; height: 1px; } }
 
 /* ─────────────────────────────────────────────
    GRIMOIRE CATALOG

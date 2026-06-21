@@ -569,7 +569,9 @@ ul { list-style: none; }
   font-size: 1.3rem;
   color: var(--blush);
   flex-shrink: 0;
+  line-height: 1;
 }
+.grimoire-card__header h4 { margin-bottom: 0; }
 .grimoire-card__body h4 {
   font-family: var(--ff-serif);
   font-size: 0.85rem;

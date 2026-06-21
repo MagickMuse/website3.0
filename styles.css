@@ -563,9 +563,10 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3.2rem;
+  font-size: 3rem;
   background: var(--ash-mid);
   border-bottom: 1px solid var(--ash-light);
+  color: var(--cream);
 }
 .grimoire-card__body { padding: 1rem 1.2rem 1.4rem; }
 .grimoire-card__body h4 {

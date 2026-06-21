@@ -137,7 +137,7 @@ ul { list-style: none; }
   font-size: clamp(0.65rem, 1vw, 0.85rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--blush);
+  color: var(--cream);
   white-space: nowrap;
   flex-shrink: 0;
   text-transform: lowercase;

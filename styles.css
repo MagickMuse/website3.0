@@ -615,6 +615,7 @@ ul { list-style: none; }
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 3rem;
+  margin-bottom: -2rem;
 }
 
 /* Shop features */

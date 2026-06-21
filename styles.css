@@ -841,6 +841,8 @@ ul { list-style: none; }
   transition: border-color 0.2s, color 0.2s;
 }
 .social-links a:hover { border-color: var(--blush); color: var(--blush); }
+.social-icon { width: 0.9rem; height: 0.9rem; object-fit: contain; display: block; opacity: 0.75; transition: opacity 0.2s; }
+.social-links a:hover .social-icon { opacity: 1; }
 
 .contact__form { display: flex; flex-direction: column; gap: 1.25rem; }
 .contact__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }

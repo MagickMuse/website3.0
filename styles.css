@@ -134,7 +134,7 @@ ul { list-style: none; }
 }
 .nav__logo {
   font-family: var(--ff-display);
-  font-size: clamp(0.65rem, 1vw, 0.85rem);
+  font-size: clamp(0.85rem, 1.3vw, 1.1rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cream);

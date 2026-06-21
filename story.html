@@ -146,5 +146,63 @@
       document.querySelector('.nav__links').classList.toggle('nav__links--open');
     });
   </script>
+
+  <!-- EXIT INTENT POPUP -->
+  <div class="popup-overlay" id="exitPopup" role="dialog" aria-modal="true" aria-label="Special offer">
+    <div class="popup">
+      <button class="popup__close" id="popupClose" aria-label="Close">&times;</button>
+      <p class="popup__eyebrow">Before You Go</p>
+      <h2 class="popup__headline">You found us.<br />That's not an accident.</h2>
+      <p class="popup__body">Get 10% off lifetime access to The Magick Manuscript, 15 cross-linked grimoires sourced from published books and built for practitioners who take their craft seriously.</p>
+      <div class="popup__code">SEEKER10</div>
+      <br />
+      <a href="https://themagickmuse.gumroad.com/l/lifetimemanuscript" class="btn btn--primary" target="_blank" rel="noopener" onclick="document.getElementById('exitPopup').classList.remove('popup--visible')">Claim My Discount</a>
+      <p class="popup__fine">Applied at checkout on Gumroad. Lifetime access only.</p>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var STORAGE_KEY = 'tmm_popup_seen';
+      if (sessionStorage.getItem(STORAGE_KEY) || localStorage.getItem(STORAGE_KEY)) return;
+
+      var overlay = document.getElementById('exitPopup');
+      var closeBtn = document.getElementById('popupClose');
+
+      function showPopup() {
+        overlay.classList.add('popup--visible');
+        localStorage.setItem(STORAGE_KEY, '1');
+      }
+
+      function closePopup() {
+        overlay.classList.remove('popup--visible');
+      }
+
+      closeBtn.addEventListener('click', closePopup);
+      overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) closePopup();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closePopup();
+      });
+
+      // Desktop: exit intent via mouse leaving viewport top
+      var triggered = false;
+      document.addEventListener('mouseleave', function(e) {
+        if (!triggered && e.clientY < 10) {
+          triggered = true;
+          showPopup();
+        }
+      });
+
+      // Mobile fallback: show after 45s if still on page
+      var mobileTimer = setTimeout(function() {
+        if (!triggered) {
+          triggered = true;
+          showPopup();
+        }
+      }, 45000);
+    })();
+  </script>
 </body>
 </html>

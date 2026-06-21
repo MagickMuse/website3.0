@@ -1201,9 +1201,30 @@ ul { list-style: none; }
   line-height: 1.8;
   margin-bottom: 0.5rem;
 }
+.article__sparkle-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.article__sparkle-list li {
+  padding-left: 1.75rem;
+  position: relative;
+}
+.article__sparkle-list li::before {
+  content: '\2756';
+  position: absolute;
+  left: 0;
+  color: var(--blush);
+  font-size: 0.75rem;
+  top: 0.45em;
+}
 .article__body strong {
   color: var(--cream);
   font-weight: 500;
+}
+.article__body .accent {
+  color: var(--blush);
+  font-style: italic;
 }
 .article__cta {
   background: var(--ash-mid);

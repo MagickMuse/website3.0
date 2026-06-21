@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
   <meta name="google-site-verification" content="sGNCHaN7FyM9XNpVW4JOatRXMUf2DCktar3FvZSES8A" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Magick Muse: The Magick Manuscript</title>
@@ -431,7 +433,9 @@
           <a href="https://discord.com/invite/PBr2BtCpxk" target="_blank" rel="noopener" aria-label="Discord"><img src="https://cdn.simpleicons.org/discord/F5EFE6" alt="Discord" class="social-icon" /></a>
         </div>
       </div>
-      <form class="contact__form" onsubmit="return false;">
+      <form class="contact__form" id="contactForm" action="https://formspree.io/f/themagickmuse" method="POST">
+        <input type="hidden" name="_subject" value="New message from magickmuse.com" />
+        <input type="text" name="_gotcha" style="display:none" />
         <div class="contact__row">
           <div class="form-group">
             <label for="fname">First Name <span class="req">(required)</span></label>
@@ -451,7 +455,36 @@
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
         <button type="submit" class="btn btn--primary">Send</button>
+        <p id="formSuccess" style="display:none;font-family:var(--ff-body);color:var(--blush);margin-top:1rem;font-style:italic;">Your message has been sent. I'll be in touch soon.</p>
+        <p id="formError" style="display:none;font-family:var(--ff-body);color:var(--blush);margin-top:1rem;font-style:italic;">Something went wrong. Please email me directly at TheMagickMuse.co@gmail.com</p>
       </form>
+      <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          var btn = this.querySelector('button[type="submit"]');
+          btn.disabled = true;
+          btn.textContent = 'Sending...';
+          try {
+            var res = await fetch(this.action, {
+              method: 'POST',
+              body: new FormData(this),
+              headers: { 'Accept': 'application/json' }
+            });
+            if (res.ok) {
+              this.reset();
+              document.getElementById('formSuccess').style.display = 'block';
+              document.getElementById('formError').style.display = 'none';
+              btn.style.display = 'none';
+            } else {
+              throw new Error();
+            }
+          } catch(err) {
+            document.getElementById('formError').style.display = 'block';
+            btn.disabled = false;
+            btn.textContent = 'Send';
+          }
+        });
+      </script>
     </div>
   </section>
 

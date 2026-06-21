@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story: The Magick Muse</title>
+  <meta name="description" content="How The Magick Manuscript was built: a personal grimoire that became a living database for serious practitioners." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cinzel:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/magic-retro" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">The Magick Muse</a>
+    <ul class="nav__links">
+      <li><a href="manuscript.html">Manuscript</a></li>
+      <li><a href="meetup.html">Muses</a></li>
+      <li><a href="mastery.html">Mastery</a></li>
+    </ul>
+    <a href="https://themagickmuse.gumroad.com/l/lifetimemanuscript" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Get the Manuscript</a>
+    <button class="nav__toggle" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero__overlay"></div>
+    <div class="page-hero__content">
+      <p class="hero__eyebrow">Behind the Manuscript</p>
+      <h1 class="page-hero__title">Our<br /><em>Story</em></h1>
+      <p class="page-hero__sub">How a personal obsession became a living grimoire for the craft.</p>
+    </div>
+  </section>
+
+  <!-- STORY CONTENT -->
+  <section class="statement">
+    <div class="container statement__inner">
+      <div class="statement__deco" aria-hidden="true">&#10022; &#9737; &#10022;</div>
+      <h2 class="statement__headline">Placeholder headline.<br /><em>Replace me.</em></h2>
+      <p class="statement__body">Placeholder content. Add your story here.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="cta-band__overlay"></div>
+    <div class="container cta-band__inner">
+      <p class="cta-band__eyebrow">A living grimoire. One lifetime price.</p>
+      <h2 class="cta-band__headline">Ready to go deeper<br />into your <em>practice?</em></h2>
+      <a href="https://themagickmuse.gumroad.com/l/lifetimemanuscript" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Get the Magick Manuscript</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">The Magick Muse</p>
+        <p><a href="mailto:themagickmuse.co@gmail.com">themagickmuse.co@gmail.com</a></p>
+        <div class="social-links" style="margin-top:1rem">
+          <a href="https://www.pinterest.com/themagickmuseco/" target="_blank" rel="noopener" aria-label="Pinterest"><img src="https://cdn.simpleicons.org/pinterest/F5EFE6" alt="Pinterest" class="social-icon" /></a>
+          <a href="https://www.instagram.com/the_magick_muse/" target="_blank" rel="noopener" aria-label="Instagram"><img src="https://cdn.simpleicons.org/instagram/F5EFE6" alt="Instagram" class="social-icon" /></a>
+          <a href="https://www.tiktok.com/@the.magick.muse" target="_blank" rel="noopener" aria-label="TikTok"><img src="https://cdn.simpleicons.org/tiktok/F5EFE6" alt="TikTok" class="social-icon" /></a>
+          <a href="https://themagickmuse.gumroad.com/" target="_blank" rel="noopener" aria-label="Gumroad"><img src="https://cdn.simpleicons.org/gumroad/F5EFE6" alt="Gumroad" class="social-icon" /></a>
+          <a href="https://discord.com/invite/PBr2BtCpxk" target="_blank" rel="noopener" aria-label="Discord"><img src="https://cdn.simpleicons.org/discord/F5EFE6" alt="Discord" class="social-icon" /></a>
+        </div>
+      </div>
+      <nav class="footer__nav">
+        <div>
+          <h5>Navigate</h5>
+          <ul>
+            <li><a href="manuscript.html">Manuscript</a></li>
+            <li><a href="meetup.html">Muses</a></li>
+            <li><a href="mastery.html">Mastery</a></li>
+            <li><a href="story.html">Our Story</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__bar">
+      <p>&copy; 2026 The Magick Muse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+    });
+    document.querySelector('.nav__toggle').addEventListener('click', () => {
+      document.querySelector('.nav__links').classList.toggle('nav__links--open');
+    });
+  </script>
+</body>
+</html>

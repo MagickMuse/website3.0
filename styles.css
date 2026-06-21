@@ -520,6 +520,15 @@ ul { list-style: none; }
   text-transform: uppercase;
   color: rgba(245,239,230,0.6);
 }
+.numbers__footnote {
+  text-align: center;
+  font-family: var(--ff-body);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: rgba(245,239,230,0.4);
+  margin-top: 1.5rem;
+  letter-spacing: 0.05em;
+}
 .numbers__divider {
   width: 1px;
   height: 80px;

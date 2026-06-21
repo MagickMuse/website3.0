@@ -536,7 +536,7 @@ ul { list-style: none; }
 }
 .grimoire__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
   margin-top: 3rem;
   margin-bottom: 4rem;
@@ -559,14 +559,16 @@ ul { list-style: none; }
   color: var(--cream);
   margin-bottom: 0.3rem;
 }
-.grimoire-card__price {
+.grimoire-card__tag {
   font-family: var(--ff-body);
   font-style: italic;
-  font-size: 1rem;
-  color: var(--blush);
+  font-size: 0.85rem;
+  color: rgba(245,239,230,0.6);
+  line-height: 1.4;
 }
-@media (max-width: 900px) { .grimoire__grid { grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 520px) { .grimoire__grid { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { .grimoire__grid { grid-template-columns: repeat(4,1fr); } }
+@media (max-width: 800px) { .grimoire__grid { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 560px) { .grimoire__grid { grid-template-columns: repeat(2,1fr); } }
 
 /* Shop features */
 .shop-features {

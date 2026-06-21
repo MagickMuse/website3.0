@@ -558,9 +558,15 @@ ul { list-style: none; }
   transition: transform 0.3s var(--ease);
 }
 .grimoire-card:hover { transform: translateY(-4px); }
-.grimoire-card__img { height: 260px; overflow: hidden; }
-.grimoire-card__img img { transition: transform 0.5s var(--ease); filter: grayscale(100%); }
-.grimoire-card:hover .grimoire-card__img img { transform: scale(1.05); }
+.grimoire-card__icon {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  background: var(--ash-mid);
+  border-bottom: 1px solid var(--ash-light);
+}
 .grimoire-card__body { padding: 1rem 1.2rem 1.4rem; }
 .grimoire-card__body h4 {
   font-family: var(--ff-serif);

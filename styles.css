@@ -1123,8 +1123,14 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   transition: transform 0.3s var(--ease);
+  position: relative;
 }
-.post-card:hover { transform: translateY(-4px); }
+.post-card:hover { transform: translateY(-4px); cursor: pointer; }
+.post-card__body .btn--ghost::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
 .post-card__img { height: 220px; overflow: hidden; flex-shrink: 0; }
 .post-card__img img { transition: transform 0.5s var(--ease); }
 .post-card:hover .post-card__img img { transform: scale(1.04); }

@@ -540,23 +540,26 @@
         if (e.key === 'ArrowRight') show(idx + 1);
       });
 
-      /* Auto-scroll thumbnails in the grid */
-      document.querySelectorAll('.peek__item[data-images]').forEach(function(item){
+      /* Auto-scroll thumbnails in the grid (staggered) */
+      var delays = [4000, 5500, 7000];
+      document.querySelectorAll('.peek__item[data-images]').forEach(function(item, n){
         var imgs = JSON.parse(item.getAttribute('data-images') || '[]');
         if (imgs.length < 2) return;
         var thumb = item.querySelector('img');
         var counter = item.querySelector('.peek__count');
         var i = 0;
-        setInterval(function(){
-          i = (i + 1) % imgs.length;
-          thumb.style.opacity = '0';
-          setTimeout(function(){
-            thumb.src = imgs[i];
-            if (counter) counter.textContent = (i + 1) + ' / ' + imgs.length;
-            thumb.style.opacity = '1';
-          }, 250);
-        }, 4000);
         thumb.style.transition = 'opacity 0.25s ease';
+        setTimeout(function(){
+          setInterval(function(){
+            i = (i + 1) % imgs.length;
+            thumb.style.opacity = '0';
+            setTimeout(function(){
+              thumb.src = imgs[i];
+              if (counter) counter.textContent = (i + 1) + ' / ' + imgs.length;
+              thumb.style.opacity = '1';
+            }, 250);
+          }, delays[n] || 4000);
+        }, n * 1500);
       });
     })();
   </script>

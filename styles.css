@@ -582,6 +582,7 @@ ul { list-style: none; }
   font-weight: 700;
   color: var(--blush);
   line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 .numbers__label {
   font-family: var(--ff-serif);
@@ -1745,20 +1746,24 @@ ul { list-style: none; }
 }
 
 /* Heading Shimmer */
-.shimmer { position: relative; text-align: inherit; }
+.shimmer { position: relative; }
 .shimmer::after {
   content: '';
   position: absolute;
-  top: 0; left: -80%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent 0%, transparent 15%, rgba(255,215,0,0.08) 35%, rgba(255,215,0,0.12) 50%, rgba(255,215,0,0.08) 65%, transparent 85%, transparent 100%);
-  animation: shimmerSweep 2s ease-in-out forwards;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 150%;
+  background: radial-gradient(ellipse at center, rgba(255,215,0,0.22) 0%, rgba(255,215,0,0.10) 40%, transparent 72%);
+  animation: shimmerGlow 2.4s ease-in-out forwards;
   pointer-events: none;
+  opacity: 0;
 }
-@keyframes shimmerSweep {
-  0%   { left: -80%; }
-  100% { left: 180%; }
+@keyframes shimmerGlow {
+  0%   { opacity: 0; }
+  45%  { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 /* Grimoire Card Glow */

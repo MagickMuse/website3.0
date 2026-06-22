@@ -46,6 +46,12 @@
       var suffix = m[2];
       var useComma = m[1].indexOf(',') !== -1;
       var dur = 1600;
+
+      // Reserve the final rendered width so counting can't shift the layout
+      el.style.display = 'inline-block';
+      el.style.textAlign = 'center';
+      el.style.minWidth = el.offsetWidth + 'px';
+
       var t0 = performance.now();
 
       function step(now) {

@@ -570,6 +570,12 @@ ul { list-style: none; }
   background: var(--ash);
   padding: clamp(4rem, 8vw, 8rem) 0;
 }
+.grimoire__teaser {
+  max-width: 640px;
+  margin: 1.5rem auto 2.5rem;
+  color: var(--cream);
+  opacity: 0.9;
+}
 .grimoire__grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

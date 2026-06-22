@@ -1379,6 +1379,8 @@ ul { list-style: none; }
   background: var(--ash);
   padding: clamp(4rem, 8vw, 8rem) 0;
 }
+/* Collapse the doubled gap when posts follow the statement on the same dark bg */
+.statement + .mastery-posts { padding-top: 0; }
 .posts__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

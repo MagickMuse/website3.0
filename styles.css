@@ -27,6 +27,17 @@
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Brand color preview: applied only to pages with <body class="brand-preview">.
+   Lets us A/B the new palette on a single page before rolling it sitewide. */
+body.brand-preview {
+  --oxblood:   #a82222;
+  --wine:      #cc5353;
+  --deep-wine: #7a1818;
+  --blush:     #cc5353;
+  --cream:     #fff1d4;
+  --ivory:     #fff7e0;
+}
+
 /* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }

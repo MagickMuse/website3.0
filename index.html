@@ -391,13 +391,31 @@
 
     let currentSlide = 0;
     const slides = document.querySelectorAll('.testimonial');
+    const sliderEl = document.getElementById('testimonialsSlider');
     function showSlide(n) {
       slides[currentSlide].classList.add('testimonial--hidden');
       currentSlide = (n + slides.length) % slides.length;
       slides[currentSlide].classList.remove('testimonial--hidden');
     }
-    document.getElementById('prevTest').addEventListener('click', () => showSlide(currentSlide - 1));
-    document.getElementById('nextTest').addEventListener('click', () => showSlide(currentSlide + 1));
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let autoplayTimer = null;
+    function startAutoplay() {
+      if (reducedMotion || slides.length < 2) return;
+      autoplayTimer = setInterval(() => showSlide(currentSlide + 1), 7000);
+    }
+    function stopAutoplay() {
+      if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
+    }
+    function restartAutoplay() { stopAutoplay(); startAutoplay(); }
+
+    document.getElementById('prevTest').addEventListener('click', () => { showSlide(currentSlide - 1); restartAutoplay(); });
+    document.getElementById('nextTest').addEventListener('click', () => { showSlide(currentSlide + 1); restartAutoplay(); });
+    if (sliderEl) {
+      sliderEl.addEventListener('mouseenter', stopAutoplay);
+      sliderEl.addEventListener('mouseleave', startAutoplay);
+    }
+    startAutoplay();
   </script>
 
   <!-- EXIT INTENT POPUP -->

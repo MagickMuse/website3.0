@@ -546,7 +546,7 @@ ul { list-style: none; }
    NUMBERS
    ───────────────────────────────────────────── */
 .numbers {
-  background: var(--ash-mid);
+  background: var(--cream);
   padding: clamp(3rem, 5vw, 5rem) 0;
 }
 .numbers__grid {
@@ -576,7 +576,7 @@ ul { list-style: none; }
   font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(245,239,230,0.6);
+  color: rgba(42,31,31,0.65);
 }
 .numbers__footnote {
   text-align: center;
@@ -590,7 +590,7 @@ ul { list-style: none; }
 .numbers__divider {
   width: 1px;
   height: 80px;
-  background: rgba(245,239,230,0.15);
+  background: rgba(42,31,31,0.15);
   flex-shrink: 0;
 }
 @media (max-width: 640px) { .numbers__grid { flex-direction: column; } .numbers__divider { width: 80px; height: 1px; } }

@@ -80,17 +80,20 @@
       <p class="peek__intro text-center">No guesswork. Here is exactly what you get when you open it.</p>
 
       <div class="peek__grid">
-        <figure class="peek__item">
-          <img loading="lazy" src="assets/homepage%20screenshot.png" alt="The Magick Manuscript home dashboard in Notion, with Marginalia updates and a Consult the Curator panel" />
-          <figcaption>The home dashboard, your way into all 15 grimoires.</figcaption>
+        <figure class="peek__item" data-images='["assets/homepage%20screenshot.png","assets/grimoire%20selection%20screenshot.png"]' data-alts='["The Magick Manuscript home dashboard in Notion","All 15 grimoires listed with descriptions and The Index"]' data-captions='["The home dashboard: updates, curator access, and your way in.","All 15 grimoires and The Index, one click away."]'>
+          <img loading="lazy" src="assets/homepage%20screenshot.png" alt="The Magick Manuscript home dashboard in Notion" />
+          <figcaption>Your home base: the dashboard and all 15 grimoires.</figcaption>
+          <span class="peek__count">1 / 2</span>
         </figure>
-        <figure class="peek__item">
-          <img loading="lazy" src="assets/plant%20grimoire%20database.png" alt="The Plant Grimoire database in Notion, a searchable gallery of plants each with its own illustrated entry" />
-          <figcaption>Inside a grimoire, filterable, searchable, fully linked.</figcaption>
+        <figure class="peek__item" data-images='["assets/plant%20grimoire%20home.png","assets/crystal%20grimoire.png","assets/tarit%20grimoire.png","assets/ritual%20grimoire%20home.png"]' data-alts='["Plant Grimoire home page with illustrated header and guide links","Crystal Grimoire gallery with photos of every stone","Tarot Grimoire gallery with card illustrations","Ritual Grimoire home page with illustrated header and spell categories"]' data-captions='["The Plant Grimoire: herbs, flowers, trees, and botanicals.","The Mineral Grimoire: every crystal, gemstone, and metal.","The Card Grimoire: tarot, lenormand, and playing card divination.","The Ritual Grimoire: spells, charms, jars, and workings."]'>
+          <img loading="lazy" src="assets/plant%20grimoire%20home.png" alt="Plant Grimoire home page with illustrated header and guide links" />
+          <figcaption>Each grimoire is its own illustrated world. Click to explore.</figcaption>
+          <span class="peek__count">1 / 4</span>
         </figure>
-        <figure class="peek__item">
-          <img loading="lazy" src="assets/apple%20entry1.png" alt="A single entry for Apple in the Plant Grimoire, showing correspondences and cross-linked properties" />
-          <figcaption>A single entry, cross-linked to every related correspondence.</figcaption>
+        <figure class="peek__item" data-images='["assets/apple%20entry1.png","assets/apple%20entry%202.png","assets/apple%20entry%203.png"]' data-alts='["Apple entry overview: image, tags, and linked correspondences","Apple entry scrolled: origins, hardiness zones, and cross-linked properties","Apple entry continued: magickal properties, ritual uses, and safety notes"]' data-captions='["Open any entry and see everything at a glance.","Scroll down: origins, warnings, and every linked property.","Keep going: ritual uses, magickal properties, and safety notes."]'>
+          <img loading="lazy" src="assets/apple%20entry1.png" alt="Apple entry overview: image, tags, and linked correspondences" />
+          <figcaption>One entry, fully cross-linked. Click through the whole page.</figcaption>
+          <span class="peek__count">1 / 3</span>
         </figure>
       </div>
     </div>
@@ -479,8 +482,11 @@
   <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox">
     <button class="lightbox__close" aria-label="Close">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Previous">&#8249;</button>
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Next">&#8250;</button>
     <img src="" alt="" />
     <p class="lightbox__caption"></p>
+    <span class="lightbox__counter"></span>
   </div>
   <script>
     (function(){
@@ -488,22 +494,70 @@
       var lbImg = lb.querySelector('img');
       var lbCap = lb.querySelector('.lightbox__caption');
       var lbClose = lb.querySelector('.lightbox__close');
+      var lbPrev = lb.querySelector('.lightbox__nav--prev');
+      var lbNext = lb.querySelector('.lightbox__nav--next');
+      var lbCounter = lb.querySelector('.lightbox__counter');
+
+      var images = [], alts = [], captions = [], idx = 0;
+
+      function show(i) {
+        idx = (i + images.length) % images.length;
+        lbImg.src = images[idx];
+        lbImg.alt = alts[idx] || '';
+        lbCap.textContent = captions[idx] || '';
+        lbCounter.textContent = (idx + 1) + ' / ' + images.length;
+      }
 
       document.querySelectorAll('.peek__item').forEach(function(item){
         item.addEventListener('click', function(){
-          var img = item.querySelector('img');
-          var cap = item.querySelector('figcaption');
-          lbImg.src = img.src;
-          lbImg.alt = img.alt;
-          lbCap.textContent = cap ? cap.textContent : '';
+          images = JSON.parse(item.getAttribute('data-images') || '[]');
+          alts = JSON.parse(item.getAttribute('data-alts') || '[]');
+          captions = JSON.parse(item.getAttribute('data-captions') || '[]');
+          if (!images.length) {
+            images = [item.querySelector('img').src];
+            alts = [item.querySelector('img').alt];
+            captions = [item.querySelector('figcaption') ? item.querySelector('figcaption').textContent : ''];
+          }
+          var hasMultiple = images.length > 1;
+          lbPrev.style.display = hasMultiple ? '' : 'none';
+          lbNext.style.display = hasMultiple ? '' : 'none';
+          lbCounter.style.display = hasMultiple ? '' : 'none';
+          show(0);
           lb.classList.add('lightbox--visible');
         });
       });
 
+      lbPrev.addEventListener('click', function(e){ e.stopPropagation(); show(idx - 1); });
+      lbNext.addEventListener('click', function(e){ e.stopPropagation(); show(idx + 1); });
+
       function closeLb(){ lb.classList.remove('lightbox--visible'); }
       lbClose.addEventListener('click', closeLb);
       lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
-      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeLb(); });
+      document.addEventListener('keydown', function(e){
+        if (!lb.classList.contains('lightbox--visible')) return;
+        if (e.key === 'Escape') closeLb();
+        if (e.key === 'ArrowLeft') show(idx - 1);
+        if (e.key === 'ArrowRight') show(idx + 1);
+      });
+
+      /* Auto-scroll thumbnails in the grid */
+      document.querySelectorAll('.peek__item[data-images]').forEach(function(item){
+        var imgs = JSON.parse(item.getAttribute('data-images') || '[]');
+        if (imgs.length < 2) return;
+        var thumb = item.querySelector('img');
+        var counter = item.querySelector('.peek__count');
+        var i = 0;
+        setInterval(function(){
+          i = (i + 1) % imgs.length;
+          thumb.style.opacity = '0';
+          setTimeout(function(){
+            thumb.src = imgs[i];
+            if (counter) counter.textContent = (i + 1) + ' / ' + imgs.length;
+            thumb.style.opacity = '1';
+          }, 250);
+        }, 4000);
+        thumb.style.transition = 'opacity 0.25s ease';
+      });
     })();
   </script>
 </body>

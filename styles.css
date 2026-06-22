@@ -730,6 +730,13 @@ ul { list-style: none; }
   background: var(--ash-mid);
   padding: clamp(4rem, 7vw, 7rem) 0;
 }
+
+/* ── FROM THE GRIMOIRE (homepage blog) ── */
+.from-grimoire {
+  background: var(--ash);
+  padding: clamp(4rem, 7vw, 7rem) 0;
+}
+.from-grimoire .section-title { margin-bottom: 3rem; }
 .testimonials__slider { max-width: 760px; margin: 3rem auto 2rem; }
 .testimonial {
   text-align: center;

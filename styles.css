@@ -1024,7 +1024,7 @@ ul { list-style: none; }
   transition: background 0.3s var(--ease);
 }
 .pillar:last-child { border-right: none; }
-.pillar:hover { background: rgba(139,38,53,0.12); }
+.pillar:hover { background: rgba(139,38,53,0.12); cursor: pointer; }
 .pillar__num {
   font-family: var(--ff-display);
   font-size: 0.65rem;

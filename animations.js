@@ -107,7 +107,7 @@
     });
 
     function sprinkle(el) {
-      var count = 5 + Math.floor(Math.random() * 2); // 5-6 stars
+      var count = 10 + Math.floor(Math.random() * 3); // 10-12 stars
       for (var i = 0; i < count; i++) {
         var star = document.createElement('span');
         star.className = 'heading-star';

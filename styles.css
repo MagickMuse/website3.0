@@ -1032,6 +1032,16 @@ ul { list-style: none; }
 }
 .testimonials__btn:hover { border-color: var(--wine); background: var(--wine); }
 
+/* Cream variant for testimonials */
+.testimonials--light { background: var(--cream); }
+.testimonials--light .section-title { color: var(--ash); }
+.testimonials--light .section-title em { color: var(--oxblood); }
+.testimonials--light .testimonial { background: #fff7e0; border-left-color: var(--oxblood); }
+.testimonials--light .testimonial blockquote p { color: var(--ash); }
+.testimonials--light .testimonial blockquote cite { color: var(--oxblood); }
+.testimonials--light .testimonials__btn { border-color: rgba(42,31,31,0.2); color: var(--ash); }
+.testimonials--light .testimonials__btn:hover { border-color: var(--oxblood); background: var(--oxblood); color: var(--cream); }
+
 /* ─────────────────────────────────────────────
    CTA BAND
    ───────────────────────────────────────────── */

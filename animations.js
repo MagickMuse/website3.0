@@ -87,19 +87,44 @@
     });
   }
 
-  // ── HEADING SHIMMER ──
+  // ── HEADING SPARKLE STARS ──
   if (!reduced) {
     var headings = document.querySelectorAll(
       '.section-title, .hero__headline, .page-hero__title, .statement__headline'
     );
+    var starGlyphs = ['✦', '✧', '✨', '✯'];
     var shimObs = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) {
-          e.target.classList.add('shimmer');
+          sprinkle(e.target);
           shimObs.unobserve(e.target);
         }
       });
     }, { threshold: 0.5 });
-    headings.forEach(function (el) { shimObs.observe(el); });
+    headings.forEach(function (el) {
+      if (getComputedStyle(el).position === 'static') el.classList.add('shimmer');
+      shimObs.observe(el);
+    });
+
+    function sprinkle(el) {
+      var count = 5 + Math.floor(Math.random() * 2); // 5-6 stars
+      for (var i = 0; i < count; i++) {
+        var star = document.createElement('span');
+        star.className = 'heading-star';
+        star.textContent = starGlyphs[Math.floor(Math.random() * starGlyphs.length)];
+        // Frame the heading: bias stars toward the top/bottom edges, not over the text
+        var x = 5 + Math.random() * 90;
+        var nearTop = Math.random() < 0.5;
+        var y = nearTop ? (-12 + Math.random() * 28) : (84 + Math.random() * 28);
+        star.style.left = x + '%';
+        star.style.top = y + '%';
+        star.style.fontSize = (0.5 + Math.random() * 0.7) + 'rem';
+        star.style.animationDelay = (Math.random() * 0.6) + 's';
+        el.appendChild(star);
+        (function (node) {
+          setTimeout(function () { if (node.parentNode) node.parentNode.removeChild(node); }, 2600);
+        })(star);
+      }
+    }
   }
 })();

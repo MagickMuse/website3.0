@@ -1745,25 +1745,24 @@ ul { list-style: none; }
   50%      { opacity: 1;    transform: scale(1.2); }
 }
 
-/* Heading Shimmer */
+/* Heading Sparkle Stars */
 .shimmer { position: relative; }
-.shimmer::after {
-  content: '';
+.heading-star {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 85%;
-  height: 150%;
-  background: radial-gradient(ellipse at center, rgba(255,241,212,0.28) 0%, rgba(255,241,212,0.12) 40%, transparent 72%);
-  animation: shimmerGlow 2.4s ease-in-out forwards;
   pointer-events: none;
+  color: var(--rose);
+  line-height: 1;
   opacity: 0;
+  transform: translate(-50%, -50%) scale(0) rotate(0deg);
+  animation: starSparkle 1.6s var(--ease) forwards;
+  text-shadow: 0 0 6px rgba(204,83,83,0.5);
+  z-index: 2;
 }
-@keyframes shimmerGlow {
-  0%   { opacity: 0; }
-  45%  { opacity: 1; }
-  100% { opacity: 0; }
+@keyframes starSparkle {
+  0%   { opacity: 0; transform: translate(-50%, -50%) scale(0)   rotate(0deg); }
+  40%  { opacity: 1; transform: translate(-50%, -50%) scale(1.1) rotate(70deg); }
+  70%  { opacity: 1; transform: translate(-50%, -50%) scale(0.9) rotate(110deg); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(0.4) rotate(160deg); }
 }
 
 /* Grimoire Card Glow */
@@ -1778,5 +1777,5 @@ ul { list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .star-particle { animation: none; opacity: 0.3; }
-  .shimmer::after { animation: none; display: none; }
+  .heading-star { display: none; }
 }

@@ -1745,20 +1745,20 @@ ul { list-style: none; }
 }
 
 /* Heading Shimmer */
-.shimmer { position: relative; overflow: hidden; display: inline-block; }
+.shimmer { position: relative; }
 .shimmer::after {
   content: '';
   position: absolute;
-  top: 0; left: -60%;
-  width: 40%;
+  top: 0; left: -80%;
+  width: 60%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,215,0,0.12), transparent);
-  animation: shimmerSweep 1.8s ease-in-out forwards;
+  background: linear-gradient(90deg, transparent 0%, transparent 15%, rgba(255,215,0,0.08) 35%, rgba(255,215,0,0.12) 50%, rgba(255,215,0,0.08) 65%, transparent 85%, transparent 100%);
+  animation: shimmerSweep 2s ease-in-out forwards;
   pointer-events: none;
 }
 @keyframes shimmerSweep {
-  0%   { left: -60%; }
-  100% { left: 160%; }
+  0%   { left: -80%; }
+  100% { left: 180%; }
 }
 
 /* Grimoire Card Glow */

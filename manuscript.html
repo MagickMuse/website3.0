@@ -215,6 +215,48 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title text-center">What practitioners say</h2>
+      <div class="testimonials__slider" id="testimonialsSlider">
+
+        <div class="testimonial" data-slide="0">
+          <blockquote>
+            <p>"Oh boy, I just opened the notion template a couple of hours ago!! WOW!! It must have taken forever to build, it's way more detailed than I was expecting. Very quickly fell down the rabbit hole. I even found info on things I didn't know I wanted to know. Definitely my #1 source for research and info from now on. Well worth the money. Thank you!!!"</p>
+            <cite>GamingGranLiza</cite>
+          </blockquote>
+        </div>
+
+        <div class="testimonial testimonial--hidden" data-slide="1">
+          <blockquote>
+            <p>"The moon phase and sign is correct. I just bought my membership and logged in, and saw the moon widget. Checked it against my pro astrology app and it was precisely accurate to the degree, minute, and sign. I can't tell you how much that meant to me. I'm so happy and grateful for this. I feel blessed."</p>
+            <cite>amDevine</cite>
+          </blockquote>
+        </div>
+
+        <div class="testimonial testimonial--hidden" data-slide="2">
+          <blockquote>
+            <p>"I bought the blank template and love it! It makes the process of studying so much easier and less intimidating."</p>
+            <cite>Anonymous</cite>
+          </blockquote>
+        </div>
+
+        <div class="testimonial testimonial--hidden" data-slide="3">
+          <blockquote>
+            <p>"I have just started scratching the surface and already love your work so much! Something about how everything is SO interlinked makes my 'practically raised by tech' brain so happy, it just feels streamlined!!"</p>
+            <cite>Blue Moth</cite>
+          </blockquote>
+        </div>
+
+      </div>
+      <div class="testimonials__controls">
+        <button class="testimonials__btn" id="prevTest" aria-label="Previous">&#8592;</button>
+        <button class="testimonials__btn" id="nextTest" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="cta-band">
     <div class="cta-band__overlay"></div>
@@ -263,6 +305,16 @@
     document.querySelector('.nav__toggle').addEventListener('click', () => {
       document.querySelector('.nav__links').classList.toggle('nav__links--open');
     });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.testimonial');
+    function showSlide(n) {
+      slides[currentSlide].classList.add('testimonial--hidden');
+      currentSlide = (n + slides.length) % slides.length;
+      slides[currentSlide].classList.remove('testimonial--hidden');
+    }
+    document.getElementById('prevTest').addEventListener('click', () => showSlide(currentSlide - 1));
+    document.getElementById('nextTest').addEventListener('click', () => showSlide(currentSlide + 1));
   </script>
 
   <!-- EXIT INTENT POPUP -->

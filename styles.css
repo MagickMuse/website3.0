@@ -5,12 +5,12 @@
 
 /* ── TOKENS ── */
 :root {
-  --oxblood:   #6B1A1A;
-  --wine:      #8B2635;
-  --deep-wine: #4A0E0E;
-  --blush:     #C0484A;
-  --cream:     #F5EFE6;
-  --ivory:     #FBF7F0;
+  --oxblood:   #a82222;
+  --wine:      #cc5353;
+  --deep-wine: #7a1818;
+  --blush:     #cc5353;
+  --cream:     #fff1d4;
+  --ivory:     #fff7e0;
   --ash:       #2A1F1F;
   --ash-mid:   #3D2B2B;
   --ash-light: #5C4040;
@@ -25,17 +25,6 @@
   --gap:   clamp(1.5rem, 4vw, 3rem);
 
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Brand color preview: applied only to pages with <body class="brand-preview">.
-   Lets us A/B the new palette on a single page before rolling it sitewide. */
-body.brand-preview {
-  --oxblood:   #a82222;
-  --wine:      #cc5353;
-  --deep-wine: #7a1818;
-  --blush:     #cc5353;
-  --cream:     #fff1d4;
-  --ivory:     #fff7e0;
 }
 
 /* ── RESET ── */
@@ -262,6 +251,13 @@ ul { list-style: none; }
   color: rgba(245,239,230,0.8);
   margin-bottom: 2.5rem;
   line-height: 1.6;
+}
+.hero__cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+  align-items: center;
 }
 .hero__scroll-hint {
   position: absolute;

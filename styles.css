@@ -1755,7 +1755,7 @@ ul { list-style: none; }
   transform: translate(-50%, -50%);
   width: 85%;
   height: 150%;
-  background: radial-gradient(ellipse at center, rgba(255,215,0,0.22) 0%, rgba(255,215,0,0.10) 40%, transparent 72%);
+  background: radial-gradient(ellipse at center, rgba(255,241,212,0.28) 0%, rgba(255,241,212,0.12) 40%, transparent 72%);
   animation: shimmerGlow 2.4s ease-in-out forwards;
   pointer-events: none;
   opacity: 0;

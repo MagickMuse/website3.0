@@ -1010,7 +1010,7 @@ ul { list-style: none; }
 }
 .manuscript__pillars {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
   margin-top: 3.5rem;
   border: 1px solid rgba(245,239,230,0.1);

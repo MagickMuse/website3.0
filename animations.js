@@ -112,14 +112,12 @@
         var star = document.createElement('span');
         star.className = 'heading-star';
         star.textContent = starGlyphs[Math.floor(Math.random() * starGlyphs.length)];
-        // Frame the heading: bias stars toward the top/bottom edges, not over the text
-        var x = 5 + Math.random() * 90;
-        var nearTop = Math.random() < 0.5;
-        var y = nearTop ? (-12 + Math.random() * 28) : (84 + Math.random() * 28);
+        var x = -5 + Math.random() * 110;
+        var y = -20 + Math.random() * 140;
         star.style.left = x + '%';
         star.style.top = y + '%';
-        star.style.fontSize = (0.5 + Math.random() * 0.7) + 'rem';
-        star.style.animationDelay = (Math.random() * 0.6) + 's';
+        star.style.fontSize = (0.45 + Math.random() * 0.75) + 'rem';
+        star.style.animationDelay = (Math.random() * 1.2) + 's';
         el.appendChild(star);
         (function (node) {
           setTimeout(function () { if (node.parentNode) node.parentNode.removeChild(node); }, 2600);

@@ -259,6 +259,30 @@ ul { list-style: none; }
   justify-content: center;
   align-items: center;
 }
+
+/* Early social-proof strip placed between marquee and brand statement */
+.trust-strip {
+  background: var(--deep-wine);
+  padding: clamp(1.75rem, 3.5vw, 2.75rem) 0;
+  text-align: center;
+}
+.trust-strip__quote { max-width: 760px; margin: 0 auto; }
+.trust-strip__quote p {
+  font-family: var(--ff-body);
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  color: var(--cream);
+  line-height: 1.5;
+  margin-bottom: 0.65rem;
+}
+.trust-strip__quote cite {
+  font-family: var(--ff-serif);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blush);
+  font-style: normal;
+}
 .hero__scroll-hint {
   position: absolute;
   z-index: 2;

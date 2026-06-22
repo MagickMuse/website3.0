@@ -92,7 +92,7 @@
     var headings = document.querySelectorAll(
       '.section-title, .hero__headline, .page-hero__title, .statement__headline'
     );
-    var starGlyphs = ['✦', '✧', '✨', '✯'];
+    var starGlyphs = ['✦', '✧'];
     var shimObs = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) {

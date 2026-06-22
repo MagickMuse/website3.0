@@ -6,9 +6,10 @@
 /* ── TOKENS ── */
 :root {
   --oxblood:   #a82222;
-  --wine:      #cc5353;
+  --wine:      #a82222;
   --deep-wine: #7a1818;
-  --blush:     #cc5353;
+  --blush:     #a82222;
+  --rose:      #cc5353;
   --cream:     #fff1d4;
   --ivory:     #fff7e0;
   --ash:       #2A1F1F;
@@ -260,9 +261,9 @@ ul { list-style: none; }
   align-items: center;
 }
 
-/* Early social-proof strip placed between marquee and brand statement */
+/* Early social-proof strip: cream callout for visual rhythm between dark sections */
 .trust-strip {
-  background: var(--deep-wine);
+  background: var(--cream);
   padding: clamp(1.75rem, 3.5vw, 2.75rem) 0;
   text-align: center;
 }
@@ -271,7 +272,7 @@ ul { list-style: none; }
   font-family: var(--ff-body);
   font-style: italic;
   font-size: clamp(1.05rem, 1.8vw, 1.35rem);
-  color: var(--cream);
+  color: var(--ash);
   line-height: 1.5;
   margin-bottom: 0.65rem;
 }
@@ -280,7 +281,7 @@ ul { list-style: none; }
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--blush);
+  color: var(--oxblood);
   font-style: normal;
 }
 .hero__scroll-hint {

@@ -932,7 +932,7 @@ ul { list-style: none; }
   background: var(--ash);
   padding: clamp(4rem, 7vw, 7rem) 0;
 }
-.faq__inner { max-width: 760px; }
+.faq__inner { max-width: 760px; margin-inline: auto; }
 .faq__list { margin-top: 3rem; }
 .faq__item {
   border-bottom: 1px solid rgba(245,239,230,0.12);
@@ -1745,7 +1745,7 @@ ul { list-style: none; }
 }
 
 /* Heading Shimmer */
-.shimmer { position: relative; }
+.shimmer { position: relative; text-align: inherit; }
 .shimmer::after {
   content: '';
   position: absolute;

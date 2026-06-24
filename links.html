@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Magick Muse | Links</title>
+  <meta name="description" content="Everything in one place. Enter the website, get the Magick Manuscript, and join the coven on Discord." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cinzel:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/magic-retro" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Magick Muse" />
+  <meta property="og:title" content="The Magick Muse" />
+  <meta property="og:description" content="Everything in one place. Enter the website, get the Magick Manuscript, and join the coven on Discord." />
+  <meta property="og:url" content="https://magickmuse.com/links.html" />
+  <link rel="canonical" href="https://magickmuse.com/links.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1606503479977-3568c9d5c94e?q=80&w=1200&auto=format&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Magick Muse" />
+  <meta name="twitter:description" content="Everything in one place. Enter the website, get the Magick Manuscript, and join the coven on Discord." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1606503479977-3568c9d5c94e?q=80&w=1200&auto=format&fit=crop" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DV5GLQV05"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0DV5GLQV05');
+  </script>
+  <style>
+    .links-page {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(2rem, 6vw, 4rem) 1.25rem;
+      overflow: hidden;
+    }
+    .links-page__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .links-page__bg video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .links-page__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(42,31,31,0.78) 0%, rgba(42,31,31,0.88) 100%);
+    }
+    .links-card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 440px;
+      text-align: center;
+    }
+    .links-card__logo {
+      font-family: var(--ff-logo);
+      font-size: clamp(2rem, 8vw, 2.75rem);
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .links-card__tagline {
+      font-family: var(--ff-serif);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 2.25rem;
+    }
+    .links-card__deco {
+      color: var(--blush);
+      letter-spacing: 0.5em;
+      font-size: 0.9rem;
+      margin-bottom: 1.75rem;
+    }
+    .link-btn {
+      display: block;
+      width: 100%;
+      padding: 1.05rem 1.5rem;
+      margin-bottom: 1rem;
+      font-family: var(--ff-serif);
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: rgba(255, 241, 212, 0.06);
+      border: 1px solid rgba(255, 241, 212, 0.28);
+      border-radius: 4px;
+      transition: transform 0.25s var(--ease), background 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
+    }
+    .link-btn:hover {
+      background: var(--cream);
+      color: var(--ash);
+      border-color: var(--cream);
+      transform: translateY(-3px);
+    }
+    .link-btn--featured {
+      background: var(--oxblood);
+      border-color: var(--oxblood);
+      color: var(--cream);
+    }
+    .link-btn--featured:hover {
+      background: var(--deep-wine);
+      border-color: var(--deep-wine);
+      color: var(--cream);
+    }
+    .link-btn__sub {
+      display: block;
+      font-family: var(--ff-body);
+      font-size: 0.78rem;
+      letter-spacing: 0;
+      text-transform: none;
+      opacity: 0.75;
+      margin-top: 0.2rem;
+    }
+    .links-card__socials {
+      display: flex;
+      justify-content: center;
+      gap: 1.4rem;
+      margin-top: 2rem;
+    }
+    .links-card__socials img {
+      width: 24px;
+      height: 24px;
+      opacity: 0.8;
+      transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+    }
+    .links-card__socials a:hover img {
+      opacity: 1;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="links-page">
+    <div class="links-page__bg" aria-hidden="true">
+      <video autoplay muted loop playsinline>
+        <source src="assets/hero-bg.mp4" type="video/mp4" />
+      </video>
+      <div class="links-page__overlay"></div>
+    </div>
+
+    <div class="links-card">
+      <p class="links-card__logo">The Magick Muse</p>
+      <p class="links-card__tagline">Witchcraft, Researched &amp; Real</p>
+      <div class="links-card__deco" aria-hidden="true">&#10022; &#9737; &#10022;</div>
+
+      <a href="index.html" class="link-btn">
+        Enter the Website
+        <span class="link-btn__sub">Explore everything The Magick Muse offers</span>
+      </a>
+
+      <a href="https://themagickmuse.gumroad.com/l/lifetimemanuscript" class="link-btn link-btn--featured" target="_blank" rel="noopener">
+        Get the Magick Manuscript
+        <span class="link-btn__sub">15 cross-linked grimoires, one searchable system</span>
+      </a>
+
+      <a href="https://discord.com/invite/PBr2BtCpxk" class="link-btn" target="_blank" rel="noopener">
+        Join the Coven
+        <span class="link-btn__sub">630+ practitioners on Discord</span>
+      </a>
+
+      <a href="mastery.html" class="link-btn">
+        Read the Blog
+        <span class="link-btn__sub">Free guides from the practice</span>
+      </a>
+
+      <div class="links-card__socials">
+        <a href="https://www.instagram.com/the_magick_muse/" target="_blank" rel="noopener" aria-label="Instagram"><img loading="lazy" src="https://cdn.simpleicons.org/instagram/fff1d4" alt="Instagram" /></a>
+        <a href="https://www.tiktok.com/@the.magick.muse" target="_blank" rel="noopener" aria-label="TikTok"><img loading="lazy" src="https://cdn.simpleicons.org/tiktok/fff1d4" alt="TikTok" /></a>
+        <a href="https://www.pinterest.com/themagickmuseco/" target="_blank" rel="noopener" aria-label="Pinterest"><img loading="lazy" src="https://cdn.simpleicons.org/pinterest/fff1d4" alt="Pinterest" /></a>
+        <a href="https://themagickmuse.gumroad.com/" target="_blank" rel="noopener" aria-label="Gumroad"><img loading="lazy" src="https://cdn.simpleicons.org/gumroad/fff1d4" alt="Gumroad" /></a>
+      </div>
+    </div>
+  </main>
+
+  <script src="animations.js" defer></script>
+</body>
+</html>

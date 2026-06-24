@@ -125,4 +125,22 @@
       }
     }
   }
+
+  // ── GUMROAD CLICK TRACKING ──
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href*="themagickmuse.gumroad.com"]');
+    if (!link || typeof gtag !== 'function') return;
+
+    var href = link.href;
+    var label = link.textContent.trim() || 'icon';
+    var type = 'store';
+    if (href.indexOf('/lifetimemanuscript') !== -1) type = 'lifetime';
+    else if (href.indexOf('/monthlymanuscript') !== -1) type = 'monthly';
+
+    gtag('event', 'click_gumroad', {
+      link_type: type,
+      link_text: label,
+      page_path: location.pathname
+    });
+  });
 })();

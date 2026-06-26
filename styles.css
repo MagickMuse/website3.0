@@ -1513,7 +1513,7 @@ ul { list-style: none; }
   font-weight: 500;
 }
 .article__body .accent {
-  color: var(--blush);
+  color: var(--rose);
   font-style: italic;
 }
 .article__cta {

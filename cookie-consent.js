@@ -14,16 +14,16 @@
   // No choice yet — show banner
   var style = document.createElement('style');
   style.textContent = [
-    '#tmm-consent{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1a1020;color:#e8dff0;',
+    '#tmm-consent{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#2A1F1F;color:#fff1d4;',
     'padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;',
-    'gap:1rem;flex-wrap:wrap;font-family:inherit;font-size:0.875rem;border-top:1px solid #4a3060;',
-    'box-shadow:0 -2px 12px rgba(0,0,0,0.4);}',
+    'gap:1rem;flex-wrap:wrap;font-family:inherit;font-size:0.875rem;border-top:1px solid #5C4040;',
+    'box-shadow:0 -2px 12px rgba(0,0,0,0.5);}',
     '#tmm-consent p{margin:0;flex:1;min-width:200px;}',
-    '#tmm-consent a{color:#c9a7e8;text-decoration:underline;}',
+    '#tmm-consent a{color:#cc5353;text-decoration:underline;}',
     '#tmm-consent .cc-btns{display:flex;gap:0.5rem;flex-shrink:0;}',
     '#tmm-consent button{padding:0.45rem 1rem;border:none;border-radius:4px;cursor:pointer;font-size:0.85rem;font-family:inherit;}',
-    '#tmm-accept{background:#7c3aed;color:#fff;}',
-    '#tmm-decline{background:transparent;color:#c9a7e8;border:1px solid #4a3060 !important;}'
+    '#tmm-accept{background:#a82222;color:#fff1d4;}',
+    '#tmm-decline{background:transparent;color:#fff1d4;border:1px solid #5C4040 !important;}'
   ].join('');
   document.head.appendChild(style);
 

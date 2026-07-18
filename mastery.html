@@ -80,8 +80,10 @@
     <div class="container">
       <div class="mastery-search">
         <input type="search" class="mastery-search__input" placeholder="Search posts..." aria-label="Search posts" id="masterySearch" />
+        <select class="mastery-filter-select" id="masteryFilters" aria-label="Filter by topic">
+          <option value="">All Topics</option>
+        </select>
       </div>
-      <div class="mastery-filters" id="masteryFilters" aria-label="Filter by topic"></div>
       <p class="mastery-no-results" id="masteryNoResults">No posts containing those keywords exist at the moment.</p>
 
       <div class="posts__grid" id="postsGrid">
@@ -363,7 +365,7 @@
     const filtersEl = document.getElementById('masteryFilters');
     const cards = Array.from(postsGrid.querySelectorAll('.post-card'));
 
-    // Build filter buttons from tags that actually exist on the page
+    // Build dropdown options from tags that actually exist on the page
     let activeFilter = '';
     const tagSet = new Set();
     cards.forEach(card => {
@@ -371,21 +373,17 @@
       if (tag) tagSet.add(tag.textContent.trim());
     });
 
-    function makeFilterBtn(label, value) {
-      const btn = document.createElement('button');
-      btn.className = 'mastery-filter-btn' + (value === '' ? ' mastery-filter-btn--active' : '');
-      btn.textContent = label;
-      btn.dataset.filter = value;
-      btn.addEventListener('click', () => {
-        activeFilter = value;
-        filtersEl.querySelectorAll('.mastery-filter-btn').forEach(b => b.classList.toggle('mastery-filter-btn--active', b.dataset.filter === value));
-        applyFilters();
-      });
-      return btn;
-    }
+    [...tagSet].sort().forEach(tag => {
+      const opt = document.createElement('option');
+      opt.value = tag;
+      opt.textContent = tag;
+      filtersEl.appendChild(opt);
+    });
 
-    filtersEl.appendChild(makeFilterBtn('All', ''));
-    [...tagSet].sort().forEach(tag => filtersEl.appendChild(makeFilterBtn(tag, tag)));
+    filtersEl.addEventListener('change', () => {
+      activeFilter = filtersEl.value;
+      applyFilters();
+    });
 
     function applyFilters() {
       const q = searchInput.value.trim().toLowerCase();

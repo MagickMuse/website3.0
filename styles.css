@@ -38,10 +38,10 @@
 
 /* ── TOKENS ── */
 :root {
-  --oxblood:   #a82222;
-  --wine:      #a82222;
+  --oxblood:   #6a1616;
+  --wine:      #8b2020;
   --deep-wine: #7a1818;
-  --blush:     #a82222;
+  --blush:     #c0503a;
   --rose:      #cc5353;
   --cream:     #fff1d4;
   --ivory:     #fff7e0;
@@ -169,7 +169,6 @@ ul { list-style: none; }
   font-family: var(--ff-display);
   font-size: clamp(0.85rem, 1.3vw, 1.1rem);
   letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: var(--cream);
   white-space: nowrap;
   flex-shrink: 0;
@@ -1311,7 +1310,7 @@ ul { list-style: none; }
   transition: background 0.3s var(--ease);
 }
 .pillar:last-child { border-right: none; }
-.pillar:hover { background: rgba(139,38,53,0.12); cursor: pointer; }
+.pillar:hover { background: rgba(139,38,53,0.12); }
 .pillar__num {
   font-family: var(--ff-display);
   font-size: 0.65rem;
@@ -1369,6 +1368,13 @@ ul { list-style: none; }
     rgba(26,10,10,0.6) 0%,
     rgba(42,15,15,0.85) 100%
   );
+}
+.page-hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .page-hero__content {
   position: relative;
@@ -1462,11 +1468,8 @@ ul { list-style: none; }
   color: rgba(245,239,230,0.68);
   flex: 1;
 }
-.post-card__body .btn--ghost {
+.post-card__body .btn--primary {
   align-self: center;
-  background: var(--blush);
-  color: var(--cream);
-  border-color: var(--blush);
 }
 
 @media (max-width: 768px) { .posts__grid { grid-template-columns: repeat(2,1fr); } }
@@ -1812,4 +1815,5 @@ ul { list-style: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .star-particle { animation: none; opacity: 0.3; }
   .heading-star { display: none; }
+  .marquee__track { animation: none; }
 }

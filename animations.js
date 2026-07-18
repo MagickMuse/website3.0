@@ -4,8 +4,7 @@
   // ── SCROLL REVEAL ──
   var sections = document.querySelectorAll(
     '.statement, .features, .grimoire, .testimonials, .numbers, ' +
-    '.cta-band, .peek, .faq, .from-grimoire, .steps, .pillar-section, ' +
-    '.blog-content, .contact, .story-body'
+    '.cta-band, .peek, .faq, .from-grimoire'
   );
 
   if (!reduced && sections.length) {

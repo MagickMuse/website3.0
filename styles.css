@@ -410,7 +410,6 @@ ul { list-style: none; }
 .intro {
   display: grid;
   grid-template-columns: 2fr 3fr;
-  min-height: 420px;
 }
 .intro__image-col {
   overflow: hidden;
@@ -733,7 +732,6 @@ ul { list-style: none; }
 .philosophy {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  min-height: 380px;
 }
 .philosophy--reverse { direction: rtl; }
 .philosophy--reverse > * { direction: ltr; }
@@ -767,7 +765,7 @@ ul { list-style: none; }
   font-size: clamp(1rem, 1.6vw, 1.3rem);
   color: var(--cream);
   max-width: 800px;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto;
   line-height: 1.5;
 }
 .pull-quote__cite {
@@ -1301,7 +1299,7 @@ ul { list-style: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: 35% 25%;
 }
 .manuscript__overlay {
   position: absolute;

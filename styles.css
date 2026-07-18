@@ -590,7 +590,7 @@ ul { list-style: none; }
    ───────────────────────────────────────────── */
 .numbers {
   background: var(--cream);
-  padding: clamp(2rem, 3.5vw, 3.5rem) 0;
+  padding: clamp(1rem, 2vw, 1.75rem) 0;
 }
 .numbers__grid {
   display: flex;

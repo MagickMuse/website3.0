@@ -3,6 +3,39 @@
    Palette: Oxblood · Wine · Ivory · Warm Ash
    ───────────────────────────────────────────── */
 
+/* ── ACCESSIBILITY ── */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 10000;
+  background: var(--wine);
+  color: var(--cream);
+  padding: 0.6rem 1.2rem;
+  font-family: var(--ff-serif);
+  font-size: 0.875rem;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-nav:focus { top: 0; }
+
+:focus-visible {
+  outline: 2px solid var(--blush);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+:focus:not(:focus-visible) { outline: none; }
+
+.footer__nav-label {
+  font-family: var(--ff-serif);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blush);
+  margin-bottom: 0.75rem;
+}
+
 /* ── TOKENS ── */
 :root {
   --oxblood:   #a82222;

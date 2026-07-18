@@ -36,6 +36,7 @@
   <script src="cookie-consent.js" defer></script>
 </head>
 <body>
+  <a class="skip-nav" href="#main-content">Skip to main content</a>
 
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo">The Magick Muse</a>
@@ -48,10 +49,12 @@
     <button class="nav__toggle" aria-label="Menu">&#9776;</button>
   </nav>
 
+  <main id="main-content">
+
   <!-- PAGE HERO -->
   <section class="page-hero">
-    <div class="hero__bg">
-      <img src="https://images.unsplash.com/photo-1581171388860-c49b6cf74dd9?q=80&w=1632&auto=format&fit=crop" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+    <div class="hero__bg" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1581171388860-c49b6cf74dd9?q=80&w=1632&auto=format&fit=crop" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"  role="presentation"/>
       <div class="hero__overlay"></div>
     </div>
     <div class="page-hero__content">
@@ -239,6 +242,8 @@
     <a href="mastery.html" class="btn btn--ghost btn--sm">&larr; Back to Mastery</a>
   </section>
 
+  </main>
+
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
@@ -254,7 +259,7 @@
       </div>
       <nav class="footer__nav">
         <div>
-          <h5>Navigate</h5>
+          <p class="footer__nav-label">Navigate</p>
           <ul>
             <li><a href="manuscript.html">Manuscript</a></li>
             <li><a href="meetup.html">Muses</a></li>

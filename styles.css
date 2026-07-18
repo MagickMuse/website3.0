@@ -491,7 +491,7 @@ ul { list-style: none; }
    GRIMOIRE CATALOG
    ───────────────────────────────────────────── */
 .grimoire {
-  background: var(--ash);
+  background: var(--ash-mid);
   padding: clamp(2.5rem, 4vw, 4rem) 0;
 }
 .grimoire__teaser {
@@ -1236,6 +1236,7 @@ ul { list-style: none; }
   position: relative;
 }
 .post-card:hover { transform: translateY(-4px); cursor: pointer; }
+.post-card__body .btn--primary::after,
 .post-card__body .btn--ghost::after {
   content: '';
   position: absolute;

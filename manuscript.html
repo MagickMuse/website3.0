@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cinzel:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="vendor/phosphor/light/style.css" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Magick Muse" />
   <meta property="og:title" content="The Magick Manuscript | The Magick Muse" />
@@ -24,13 +24,17 @@
   <meta name="twitter:title" content="The Magick Manuscript | The Magick Muse" />
   <meta name="twitter:description" content="A living digital grimoire with 17,400 pages of sourced, cross-linked magickal research. Crystals, deities, plants, astrology, ritual, tarot, and more." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1606503479977-3568c9d5c94e?q=80&w=1200&auto=format&fit=crop" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DV5GLQV05"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied'});
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DV5GLQV05"></script>
+  <script>
     gtag('js', new Date());
     gtag('config', 'G-0DV5GLQV05');
   </script>
+  <script src="cookie-consent.js" defer></script>
 </head>
 <body>
 
@@ -359,7 +363,7 @@
       </nav>
     </div>
     <div class="footer__bar">
-      <p>&copy; 2026 The Magick Muse. All rights reserved.</p>
+      <p><a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; &copy; 2026 The Magick Muse. All rights reserved.</p>
     </div>
   </footer>
 

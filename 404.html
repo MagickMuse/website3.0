@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | The Magick Muse</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cinzel:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DV5GLQV05"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0DV5GLQV05');
+  </script>
+  <style>
+    .error-page {
+      min-height: calc(100vh - 80px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 1.5rem;
+      text-align: center;
+      background: var(--ash);
+    }
+    .error-page__inner {
+      max-width: 560px;
+    }
+    .error-page__number {
+      font-family: var(--ff-display);
+      font-size: clamp(5rem, 20vw, 10rem);
+      color: var(--wine);
+      line-height: 1;
+      margin: 0 0 0.5rem;
+      opacity: 0.35;
+      letter-spacing: 0.05em;
+    }
+    .error-page__deco {
+      color: var(--wine);
+      font-size: 1rem;
+      letter-spacing: 0.3em;
+      margin-bottom: 1.5rem;
+      opacity: 0.6;
+    }
+    .error-page__title {
+      font-family: var(--ff-display);
+      font-size: clamp(1.5rem, 5vw, 2.25rem);
+      color: var(--cream);
+      margin: 0 0 1rem;
+      font-weight: 400;
+    }
+    .error-page__title em {
+      font-style: italic;
+      color: var(--rose);
+    }
+    .error-page__body {
+      font-family: var(--ff-body);
+      font-size: 1.1rem;
+      color: var(--ash-light);
+      line-height: 1.7;
+      margin: 0 0 2.5rem;
+    }
+    .error-page__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">The Magick Muse</a>
+    <ul class="nav__links">
+      <li><a href="manuscript.html">Manuscript</a></li>
+      <li><a href="meetup.html">Muses</a></li>
+      <li><a href="mastery.html">Mastery</a></li>
+    </ul>
+    <a href="https://themagickmuse.gumroad.com/l/lifetimemanuscript" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Get the Manuscript</a>
+    <button class="nav__toggle" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <section class="error-page">
+    <div class="error-page__inner">
+      <p class="error-page__number">404</p>
+      <p class="error-page__deco">&#10022; &#9737; &#10022;</p>
+      <h1 class="error-page__title">This page has<br /><em>crossed over.</em></h1>
+      <p class="error-page__body">It may have moved, been removed, or never existed in the first place. The path you were on doesn't lead anywhere from here.</p>
+      <div class="error-page__actions">
+        <a href="index.html" class="btn btn--primary">Back to Home</a>
+        <a href="mastery.html" class="btn btn--ghost">Browse the Blog</a>
+        <a href="manuscript.html" class="btn btn--ghost">The Manuscript</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">The Magick Muse</p>
+        <p><a href="mailto:TheMagickMuse.co@gmail.com">TheMagickMuse.co@gmail.com</a></p>
+        <div class="social-links" style="margin-top:1rem">
+          <a href="https://www.pinterest.com/themagickmuseco/" target="_blank" rel="noopener" aria-label="Pinterest"><img loading="lazy" src="icons/pinterest.svg" alt="Pinterest" class="social-icon" /></a>
+          <a href="https://www.instagram.com/the_magick_muse/" target="_blank" rel="noopener" aria-label="Instagram"><img loading="lazy" src="icons/instagram.svg" alt="Instagram" class="social-icon" /></a>
+          <a href="https://www.tiktok.com/@the.magick.muse" target="_blank" rel="noopener" aria-label="TikTok"><img loading="lazy" src="icons/tiktok.svg" alt="TikTok" class="social-icon" /></a>
+          <a href="https://themagickmuse.gumroad.com/" target="_blank" rel="noopener" aria-label="Gumroad"><img loading="lazy" src="icons/gumroad.svg" alt="Gumroad" class="social-icon" /></a>
+          <a href="https://discord.com/invite/PBr2BtCpxk" target="_blank" rel="noopener" aria-label="Discord"><img loading="lazy" src="icons/discord.svg" alt="Discord" class="social-icon" /></a>
+        </div>
+      </div>
+      <nav class="footer__nav">
+        <div>
+          <h5>Navigate</h5>
+          <ul>
+            <li><a href="manuscript.html">Manuscript</a></li>
+            <li><a href="meetup.html">Muses</a></li>
+            <li><a href="mastery.html">Mastery</a></li>
+            <li><a href="story.html">Our Story</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__bar">
+      <p>&copy; 2026 The Magick Muse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+    });
+    (function(){
+      var navToggle = document.querySelector(".nav__toggle");
+      var navLinks = document.querySelector(".nav__links");
+      var navCta = document.querySelector(".nav > .btn");
+      var ctaAnchor = document.createComment("nav-cta-anchor");
+      if (navCta) navCta.parentNode.insertBefore(ctaAnchor, navCta);
+      navToggle.addEventListener("click", function(){
+        var opening = !navLinks.classList.contains("nav__links--open");
+        navLinks.classList.toggle("nav__links--open");
+        if (!navCta) return;
+        if (opening) {
+          var li = document.createElement("li");
+          li.className = "nav__cta-mobile";
+          li.appendChild(navCta);
+          navLinks.appendChild(li);
+        } else {
+          ctaAnchor.parentNode.insertBefore(navCta, ctaAnchor);
+          var li = navLinks.querySelector(".nav__cta-mobile");
+          if (li) li.remove();
+        }
+      });
+    })();
+  </script>
+  <script src="animations.js" defer></script>
+</body>
+</html>

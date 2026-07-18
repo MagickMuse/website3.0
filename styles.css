@@ -1297,82 +1297,43 @@ ul { list-style: none; }
 }
 
 .parthenon {
-  margin-top: clamp(2rem, 4vw, 3.5rem);
-  padding: 0 clamp(2rem, 8vw, 8rem);
+  position: relative;
+  overflow: hidden;
+  margin-top: clamp(2rem, 4vw, 3rem);
 }
 
-/* Pediment */
-.parthenon__pediment { line-height: 0; }
-.parthenon__pediment svg {
-  display: block;
+.parthenon__bg {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: clamp(44px, 7vw, 80px);
+  height: 100%;
+  display: block;
+  opacity: 0.22;
+  pointer-events: none;
 }
 
-/* Entablature */
-.parthenon__frieze {
-  height: clamp(14px, 2.2vw, 26px);
-  background: #b8ada0;
-  border-top: 1px solid #f5efe6;
-  border-bottom: 1px solid #a09590;
-  background-image: repeating-linear-gradient(
-    90deg,
-    transparent 0px, transparent 22px,
-    rgba(0,0,0,0.12) 22px, rgba(0,0,0,0.12) 24px
-  );
-}
-.parthenon__architrave {
-  height: clamp(10px, 1.6vw, 18px);
-  background: #cdc2b4;
-  border-bottom: 1px solid #a09590;
-}
-
-/* Colonnade grid: col | content | col | content | col | content | col */
-.parthenon__colonnade {
+.parthenon__cards {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 54px 1fr 54px 1fr 54px 1fr 54px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: clamp(5rem, 10vw, 8rem) clamp(4rem, 10vw, 9rem) clamp(3.5rem, 8vw, 6rem);
 }
 
-/* Column */
-.parthenon__col {
-  display: flex;
-  flex-direction: column;
-}
-.parthenon__col-cap,
-.parthenon__col-base {
-  display: block;
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
-}
-.parthenon__col-shaft {
-  flex: 1;
-  min-height: 60px;
-  width: 36px;
-  margin: 0 auto;
-  /* Fluting effect via repeating gradient */
-  background: repeating-linear-gradient(
-    90deg,
-    #b8ada0 0px,
-    #f5efe6 3px,
-    #d8cdc0 7px,
-    #b8ada0 10px,
-    #f5efe6 13px,
-    #d8cdc0 17px
-  );
-}
-
-/* Pillar content */
 .pillar {
-  padding: 2.5rem 2rem;
+  padding: 2rem 1.75rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
   text-align: center;
+  background: rgba(20,10,10,0.58);
+  border: 1px solid rgba(245,239,230,0.09);
   transition: background 0.3s var(--ease);
 }
-.pillar:hover { background: rgba(139,38,53,0.14); }
+.pillar:hover { background: rgba(90,18,18,0.50); }
+
 .pillar__name {
   font-family: var(--ff-display);
   font-size: clamp(1rem, 1.6vw, 1.35rem);
@@ -1387,39 +1348,14 @@ ul { list-style: none; }
   max-width: 260px;
 }
 
-/* Stylobate (stepped base) */
-.parthenon__stylobate { display: flex; flex-direction: column; }
-.parthenon__step {
-  border-top: 1px solid #a09590;
-  height: clamp(7px, 1vw, 13px);
-}
-.parthenon__step:nth-child(1) { background: #cdc2b4; }
-.parthenon__step:nth-child(2) { background: #bdb2a4; }
-.parthenon__step:nth-child(3) { background: #ada298; }
-
-/* Tablet */
-@media (max-width: 900px) {
-  .parthenon__colonnade {
-    grid-template-columns: 38px 1fr 38px 1fr 38px 1fr 38px;
-  }
-  .parthenon__col-shaft { width: 26px; }
-  .pillar { padding: 2rem 1.25rem; }
-}
-
-/* Mobile — drop columns, stack content */
 @media (max-width: 640px) {
-  .parthenon__pediment,
-  .parthenon__entablature,
-  .parthenon__stylobate { display: none; }
-  .parthenon__col { display: none; }
-  .parthenon__colonnade {
+  .parthenon__bg { display: none; }
+  .parthenon__cards {
     grid-template-columns: 1fr;
-    border: 1px solid rgba(245,239,230,0.10);
-  }
-  .pillar {
     padding: 2rem 1.5rem;
-    border-bottom: 1px solid rgba(245,239,230,0.10);
+    gap: 0;
   }
+  .pillar { border-bottom: 1px solid rgba(245,239,230,0.10); }
   .pillar:last-child { border-bottom: none; }
 }
 

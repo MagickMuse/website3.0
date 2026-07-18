@@ -1014,7 +1014,7 @@ ul { list-style: none; }
 
 /* ── FROM THE GRIMOIRE (homepage blog) ── */
 .from-grimoire {
-  background: var(--cream);
+  background: var(--ash);
   padding: clamp(4rem, 7vw, 7rem) 0;
 }
 .from-grimoire .section-title { margin-bottom: 3rem; color: var(--ash); }

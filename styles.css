@@ -443,6 +443,139 @@ ul { list-style: none; }
 
 
 /* ─────────────────────────────────────────────
+   NUMBERS
+   ───────────────────────────────────────────── */
+.numbers {
+  background: var(--cream);
+  padding: clamp(1rem, 2vw, 1.75rem) 0;
+}
+.numbers__grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.numbers__item {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+.numbers__big {
+  font-family: var(--ff-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--wine);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.numbers__label {
+  font-family: var(--ff-serif);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(42,31,31,0.65);
+}
+.numbers__divider {
+  width: 1px;
+  height: 80px;
+  background: rgba(42,31,31,0.15);
+  flex-shrink: 0;
+}
+@media (max-width: 640px) { .numbers__grid { flex-direction: column; } .numbers__divider { width: 80px; height: 1px; } }
+
+/* ─────────────────────────────────────────────
+   GRIMOIRE CATALOG
+   ───────────────────────────────────────────── */
+.grimoire {
+  background: var(--ash);
+  padding: clamp(2.5rem, 4vw, 4rem) 0;
+}
+.grimoire__teaser {
+  max-width: 640px;
+  margin: 1.5rem auto 2.5rem;
+  color: var(--cream);
+  opacity: 0.9;
+}
+.grimoire__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.grimoire-card {
+  background: var(--ash-mid);
+  overflow: hidden;
+  transition: transform 0.3s var(--ease);
+}
+.grimoire-card:hover { transform: translateY(-4px); }
+.grimoire-card__body { padding: 1.2rem 1.2rem 1.4rem; }
+.grimoire-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+.grimoire-card__header i {
+  font-size: 1.3rem;
+  color: var(--blush);
+  flex-shrink: 0;
+  line-height: 1;
+}
+.grimoire-card__header h4 { margin-bottom: 0; }
+.grimoire-card__body h4 {
+  font-family: var(--ff-serif);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 0.3rem;
+}
+.grimoire-card__tag {
+  font-family: var(--ff-body);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: rgba(245,239,230,0.6);
+  line-height: 1.4;
+}
+@media (max-width: 1100px) { .grimoire__grid { grid-template-columns: repeat(4,1fr); } }
+@media (max-width: 800px) { .grimoire__grid { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 560px) { .grimoire__grid { grid-template-columns: repeat(2,1fr); } }
+.grimoire__cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-bottom: -2rem;
+}
+
+/* Shop features */
+.shop-features {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: var(--gap);
+  border-top: 1px solid rgba(245,239,230,0.12);
+  padding-top: 3rem;
+}
+.shop-feat { text-align: center; padding: 1.5rem; }
+.shop-feat__icon { font-size: 1.5rem; color: var(--blush); margin-bottom: 0.75rem; }
+.shop-feat h5 {
+  font-family: var(--ff-serif);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 0.6rem;
+}
+.shop-feat p { font-size: 0.88rem; color: rgba(245,239,230,0.68); }
+@media (max-width: 640px) { .shop-features { grid-template-columns: 1fr; } }
+
+/* ─────────────────────────────────────────────
    PHILOSOPHY SPLIT
    ───────────────────────────────────────────── */
 .philosophy {

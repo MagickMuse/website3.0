@@ -404,6 +404,12 @@ ul { list-style: none; }
   margin-inline: auto;
 }
 
+.statement--light { background: var(--cream); }
+.statement--light .statement__deco { color: var(--oxblood); }
+.statement--light .statement__headline { color: var(--ash); }
+.statement--light .statement__headline em { color: var(--oxblood); }
+.statement--light .statement__body { color: rgba(42,31,31,0.82); }
+
 /* ─────────────────────────────────────────────
    INTRO / ABOUT SPLIT
    ───────────────────────────────────────────── */

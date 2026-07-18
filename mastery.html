@@ -81,6 +81,7 @@
       <div class="mastery-search">
         <input type="search" class="mastery-search__input" placeholder="Search posts..." aria-label="Search posts" id="masterySearch" />
       </div>
+      <div class="mastery-filters" id="masteryFilters" aria-label="Filter by topic"></div>
       <p class="mastery-no-results" id="masteryNoResults">No posts containing those keywords exist at the moment.</p>
 
       <div class="posts__grid" id="postsGrid">
@@ -359,19 +360,49 @@
     const searchInput = document.getElementById('masterySearch');
     const postsGrid = document.getElementById('postsGrid');
     const noResults = document.getElementById('masteryNoResults');
+    const filtersEl = document.getElementById('masteryFilters');
     const cards = Array.from(postsGrid.querySelectorAll('.post-card'));
 
-    searchInput.addEventListener('input', () => {
+    // Build filter buttons from tags that actually exist on the page
+    let activeFilter = '';
+    const tagSet = new Set();
+    cards.forEach(card => {
+      const tag = card.querySelector('.post-card__tag');
+      if (tag) tagSet.add(tag.textContent.trim());
+    });
+
+    function makeFilterBtn(label, value) {
+      const btn = document.createElement('button');
+      btn.className = 'mastery-filter-btn' + (value === '' ? ' mastery-filter-btn--active' : '');
+      btn.textContent = label;
+      btn.dataset.filter = value;
+      btn.addEventListener('click', () => {
+        activeFilter = value;
+        filtersEl.querySelectorAll('.mastery-filter-btn').forEach(b => b.classList.toggle('mastery-filter-btn--active', b.dataset.filter === value));
+        applyFilters();
+      });
+      return btn;
+    }
+
+    filtersEl.appendChild(makeFilterBtn('All', ''));
+    [...tagSet].sort().forEach(tag => filtersEl.appendChild(makeFilterBtn(tag, tag)));
+
+    function applyFilters() {
       const q = searchInput.value.trim().toLowerCase();
       let visible = 0;
       cards.forEach(card => {
         const text = (card.textContent + ' ' + (card.dataset.content || '')).toLowerCase();
-        const show = !q || text.includes(q);
+        const tag = card.querySelector('.post-card__tag');
+        const matchesSearch = !q || text.includes(q);
+        const matchesFilter = !activeFilter || (tag && tag.textContent.trim() === activeFilter);
+        const show = matchesSearch && matchesFilter;
         card.style.display = show ? '' : 'none';
         if (show) visible++;
       });
       noResults.style.display = visible === 0 ? 'block' : 'none';
-    });
+    }
+
+    searchInput.addEventListener('input', applyFilters);
   </script>
 
   <!-- EXIT INTENT POPUP -->

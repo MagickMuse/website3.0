@@ -1015,7 +1015,7 @@ ul { list-style: none; }
   background: var(--ash);
   padding: clamp(2.5rem, 4vw, 4rem) 0;
 }
-.from-grimoire .section-title { margin-bottom: 3rem; color: var(--ash); }
+.from-grimoire .section-title { margin-bottom: 3rem; color: var(--cream); }
 .from-grimoire .eyebrow { color: var(--oxblood); }
 .testimonials__slider { max-width: 760px; margin: 3rem auto 2rem; }
 .testimonial {

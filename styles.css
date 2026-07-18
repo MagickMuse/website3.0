@@ -409,8 +409,8 @@ ul { list-style: none; }
    ───────────────────────────────────────────── */
 .intro {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 600px;
+  grid-template-columns: 2fr 3fr;
+  min-height: 420px;
 }
 .intro__image-col {
   overflow: hidden;
@@ -732,8 +732,8 @@ ul { list-style: none; }
    ───────────────────────────────────────────── */
 .philosophy {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 500px;
+  grid-template-columns: 3fr 2fr;
+  min-height: 380px;
 }
 .philosophy--reverse { direction: rtl; }
 .philosophy--reverse > * { direction: ltr; }

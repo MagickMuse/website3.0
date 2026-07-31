@@ -7,73 +7,78 @@
   <meta name="google-site-verification" content="sGNCHaN7FyM9XNpVW4JOatRXMUf2DCktar3FvZSES8A" />
   <meta name="theme-color" content="#1a0a0a" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Witchcraft 101 | Beginner Course | The Magick Muse</title>
-  <meta name="description" content="A self-paced beginner witchcraft course grounded in published sources. Seven units from what witchcraft is to casting your first spell, with real understanding behind it." />
+  <title>Witchcraft 111 | Course Series | The Magick Muse</title>
+  <meta name="description" content="Seven self-paced courses going deeper into specific areas of the craft. Divination, astrology, ancestors, deities, herbalism, runes, and crystals. Buy individually or get them all." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cinzel:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Magick Muse" />
-  <meta property="og:title" content="Witchcraft 101 | Beginner Course | The Magick Muse" />
-  <meta property="og:description" content="A self-paced beginner witchcraft course grounded in published sources. Seven units from what witchcraft is to casting your first spell." />
-  <meta property="og:url" content="https://magickmuse.com/witchcraft101.html" />
-  <link rel="canonical" href="https://magickmuse.com/witchcraft101.html" />
+  <meta property="og:title" content="Witchcraft 111 | Course Series | The Magick Muse" />
+  <meta property="og:description" content="Seven self-paced courses going deeper into specific areas of the craft. Buy individually or get them all." />
+  <meta property="og:url" content="https://magickmuse.com/witchcraft111.html" />
+  <link rel="canonical" href="https://magickmuse.com/witchcraft111.html" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1532543307581-8b01a7ff954f?q=80&w=1200&auto=format&fit=crop" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Witchcraft 101 | Beginner Course | The Magick Muse" />
-  <meta name="twitter:description" content="A self-paced beginner witchcraft course grounded in published sources. Seven units from what witchcraft is to casting your first spell." />
+  <meta name="twitter:title" content="Witchcraft 111 | Course Series | The Magick Muse" />
+  <meta name="twitter:description" content="Seven self-paced courses going deeper into specific areas of the craft. Buy individually or get them all." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1532543307581-8b01a7ff954f?q=80&w=1200&auto=format&fit=crop" />
   <style>
-    .units-section {
+    .coming-soon-badge {
+      display: inline-block;
+      font-family: var(--ff-serif);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ash);
+      background: var(--blush);
+      padding: 0.3rem 0.85rem;
+      border-radius: 2px;
+      margin-bottom: 1.25rem;
+    }
+    .series-section {
       padding: clamp(3rem, 8vw, 5rem) 0;
       background: var(--ash-mid);
     }
-    .units-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto;
+    .series-grid {
       display: grid;
-      gap: 0.85rem;
-      max-width: 680px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 2.5rem;
+      max-width: 900px;
+      margin-inline: auto;
+      margin-block-start: 2.5rem;
     }
-    .unit-card {
+    .series-card {
       display: flex;
       align-items: flex-start;
-      gap: 1.25rem;
-      padding: 1.25rem 1.5rem;
+      gap: 1.1rem;
+      padding: 1.25rem 1.4rem;
       background: rgba(255, 241, 212, 0.05);
       border: 1px solid rgba(255, 241, 212, 0.14);
       border-radius: 4px;
       transition: border-color 0.2s;
     }
-    .unit-card:hover {
-      border-color: rgba(255, 241, 212, 0.3);
-    }
-    .unit-card__num {
+    .series-card:hover { border-color: rgba(255, 241, 212, 0.3); }
+    .series-card__num {
       font-family: var(--ff-display);
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       color: var(--rose);
       line-height: 1.2;
       flex-shrink: 0;
-      min-width: 2.25rem;
+      min-width: 2rem;
     }
-    .unit-card__title {
+    .series-card__title {
       font-family: var(--ff-serif);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       letter-spacing: 0.07em;
       text-transform: uppercase;
       color: var(--cream);
-      margin: 0 0 0.35rem;
-    }
-    .unit-card__desc {
-      font-size: 0.9rem;
-      color: var(--cream);
-      opacity: 0.72;
       margin: 0;
-      line-height: 1.6;
+      line-height: 1.4;
     }
-    .unit-note {
+    .series-note {
       text-align: center;
       font-family: var(--ff-serif);
       font-size: 0.82rem;
@@ -126,22 +131,17 @@
   {
     "@context": "https://schema.org",
     "@type": "Course",
-    "name": "Witchcraft 101",
-    "description": "A self-paced beginner witchcraft course grounded in published sources. Seven units from what witchcraft is to casting your first spell, with real understanding behind it.",
-    "url": "https://magickmuse.com/witchcraft101.html",
+    "name": "Witchcraft 111",
+    "description": "A self-paced course series going deeper into specific areas of the craft. Seven courses covering divination, astrology, ancestor veneration, deities, herbalism, runes, and crystals.",
+    "url": "https://magickmuse.com/witchcraft111.html",
     "provider": {
       "@type": "Organization",
       "name": "The Magick Muse",
       "url": "https://magickmuse.com"
     },
     "courseMode": "self-paced",
-    "educationalLevel": "Beginner",
-    "teaches": "Witchcraft foundations, tools and altars, correspondences, spiritual hygiene, shadow work, spell preparation, and casting a spell",
-    "hasCourseInstance": {
-      "@type": "CourseInstance",
-      "courseMode": "online",
-      "courseWorkload": "PT7H"
-    }
+    "educationalLevel": "Beginner to Intermediate",
+    "teaches": "Divination, astrology, ancestor veneration, deities, herbalism, runes, crystals"
   }
   </script>
 </head>
@@ -156,7 +156,7 @@
       <li><a href="mastery.html">Blog</a></li>
       <li><a href="witchcraft101.html" class="nav__link--active">Course</a></li>
     </ul>
-    <a href="https://themagickmuse.gumroad.com/l/witchcraft101" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Enroll Now</a>
+    <a href="https://themagickmuse.gumroad.com/l/witchcraft111" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Get Early Access</a>
     <button class="nav__toggle" aria-label="Menu">&#9776;</button>
   </nav>
 
@@ -169,9 +169,9 @@
       <div class="hero__overlay"></div>
     </div>
     <div class="page-hero__content">
-      <p class="hero__eyebrow">A Beginner Witchcraft Course</p>
-      <h1 class="page-hero__title">Witchcraft<br /><em>101</em></h1>
-      <p class="page-hero__sub">Seven units. Real sources. Your first complete practice.</p>
+      <span class="coming-soon-badge">Coming Soon</span>
+      <h1 class="page-hero__title">Witchcraft<br /><em>111</em></h1>
+      <p class="page-hero__sub">Seven courses. One area each. Go as deep as you want.</p>
     </div>
   </section>
 
@@ -179,72 +179,51 @@
   <section class="statement">
     <div class="container statement__inner">
       <div class="statement__deco" aria-hidden="true">&#10022; &#9737; &#10022;</div>
-      <h2 class="statement__headline">Learn witchcraft the way<br /><em>it deserves to be taught.</em></h2>
-      <p class="statement__body">Witchcraft 101 is a self-paced course built from the ground up using published sources and hands-on practice you do yourself. Designed by a practicing teacher and lifelong witch, it gives you a real foundation in the craft.</p>
-      <p class="statement__body">Seven units. Each one includes readings, key terms, practical application, a discussion prompt, and homework. By the end, you will have cast your first spell with real understanding behind it.</p>
+      <h2 class="statement__headline">You have the foundation.<br /><em>Now go deeper.</em></h2>
+      <p class="statement__body">The 111 series picks up where Witchcraft 101 leaves off. Each course takes one area of magickal practice and walks you through it from the ground up, with real published sources and hands-on work you actually do yourself. Designed by a practicing teacher and lifelong witch, built the same way as 101.</p>
+      <p class="statement__body">Buy the courses individually as they launch, or get early access to the full series now.</p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.75rem;">
-        <a href="https://themagickmuse.gumroad.com/l/witchcraft101" class="btn btn--primary" target="_blank" rel="noopener">Enroll Now</a>
+        <a href="https://themagickmuse.gumroad.com/l/witchcraft111" class="btn btn--primary" target="_blank" rel="noopener">Get Early Access</a>
       </div>
     </div>
   </section>
 
-  <!-- UNITS -->
-  <section class="units-section">
+  <!-- SERIES -->
+  <section class="series-section">
     <div class="container">
-      <p class="eyebrow text-center">The Curriculum</p>
-      <h2 class="section-title text-center">What you'll learn</h2>
-      <ol class="units-list">
-        <li class="unit-card">
-          <span class="unit-card__num">01</span>
-          <div>
-            <h3 class="unit-card__title">What Is Witchcraft</h3>
-            <p class="unit-card__desc">What witchcraft actually is, where it comes from, and how to think about it clearly before you begin your practice.</p>
-          </div>
-        </li>
-        <li class="unit-card">
-          <span class="unit-card__num">02</span>
-          <div>
-            <h3 class="unit-card__title">Tools and Altars</h3>
-            <p class="unit-card__desc">What you actually need to start, what is optional, and how to build an altar that works for your space and life.</p>
-          </div>
-        </li>
-        <li class="unit-card">
-          <span class="unit-card__num">03</span>
-          <div>
-            <h3 class="unit-card__title">Correspondences</h3>
-            <p class="unit-card__desc">The system of symbolic relationships that underpins almost all spellwork. How correspondences function and how to use them with intention.</p>
-          </div>
-        </li>
-        <li class="unit-card">
-          <span class="unit-card__num">04</span>
-          <div>
-            <h3 class="unit-card__title">Spiritual Hygiene</h3>
-            <p class="unit-card__desc">Cleansing, grounding, shielding, and warding. The protective practices every practitioner needs before moving into spellwork.</p>
-          </div>
-        </li>
-        <li class="unit-card">
-          <span class="unit-card__num">05</span>
-          <div>
-            <h3 class="unit-card__title">Shadow Work</h3>
-            <p class="unit-card__desc">What shadow work is, why it matters for a serious practice, and how to begin without overwhelming yourself.</p>
-          </div>
-        </li>
-        <li class="unit-card">
-          <span class="unit-card__num">06</span>
-          <div>
-            <h3 class="unit-card__title">Spell Preparation</h3>
-            <p class="unit-card__desc">Research, timing, components, and intention. Everything that goes into a spell before you cast it.</p>
-          </div>
-        </li>
-        <li class="unit-card">
-          <span class="unit-card__num">07</span>
-          <div>
-            <h3 class="unit-card__title">Casting a Spell</h3>
-            <p class="unit-card__desc">The act itself, from opening to closing. You will cast your first spell with full understanding of what you are doing and why.</p>
-          </div>
-        </li>
-      </ol>
-      <p class="unit-note">Every unit includes readings &bull; key terms &bull; practical application &bull; a discussion prompt &bull; homework</p>
+      <p class="eyebrow text-center">The Series</p>
+      <h2 class="section-title text-center">What&#8217;s included</h2>
+      <div class="series-grid">
+        <div class="series-card">
+          <span class="series-card__num">01</span>
+          <div><h3 class="series-card__title">Intro to Divination</h3></div>
+        </div>
+        <div class="series-card">
+          <span class="series-card__num">02</span>
+          <div><h3 class="series-card__title">Intro to Astrology</h3></div>
+        </div>
+        <div class="series-card">
+          <span class="series-card__num">03</span>
+          <div><h3 class="series-card__title">Intro to Ancestor Veneration</h3></div>
+        </div>
+        <div class="series-card">
+          <span class="series-card__num">04</span>
+          <div><h3 class="series-card__title">Intro to Deities</h3></div>
+        </div>
+        <div class="series-card">
+          <span class="series-card__num">05</span>
+          <div><h3 class="series-card__title">Intro to Herbalism</h3></div>
+        </div>
+        <div class="series-card">
+          <span class="series-card__num">06</span>
+          <div><h3 class="series-card__title">Intro to Runes</h3></div>
+        </div>
+        <div class="series-card">
+          <span class="series-card__num">07</span>
+          <div><h3 class="series-card__title">Intro to Crystals</h3></div>
+        </div>
+      </div>
+      <p class="series-note">Each course includes readings &bull; key terms &bull; practical application &bull; a discussion prompt &bull; homework</p>
     </div>
   </section>
 
@@ -256,15 +235,15 @@
       <div class="how-grid">
         <div class="how-item">
           <p class="how-item__label">Platform</p>
-          <p class="how-item__text">Hosted in Google Classroom. Access it from any device, any time.</p>
+          <p class="how-item__text">Hosted in Google Classroom. Access from any device, any time.</p>
         </div>
         <div class="how-item">
           <p class="how-item__label">Pace</p>
-          <p class="how-item__text">Fully self-paced. Work through it in a weekend or stretch it over months.</p>
+          <p class="how-item__text">Fully self-paced. Work through one course or all seven, in any order.</p>
         </div>
         <div class="how-item">
           <p class="how-item__label">Access</p>
-          <p class="how-item__text">Permanent once enrolled. No deadlines, no expiry, no live sessions to miss.</p>
+          <p class="how-item__text">Buy individually or get the full series. Access delivered by email as each course launches.</p>
         </div>
       </div>
     </div>
@@ -274,11 +253,11 @@
   <section class="statement">
     <div class="container statement__inner">
       <div class="statement__deco" aria-hidden="true">&#10022; &#9737; &#10022;</div>
-      <h2 class="statement__headline">Starting from zero<br /><em>is exactly the point.</em></h2>
-      <p class="statement__body">This course is for anyone who wants to learn witchcraft properly before diving into spellwork. No prior experience needed. No background in any tradition required. If you have been overwhelmed by conflicting or questionable information online and want a clear, sourced, grounded foundation, this is where to start.</p>
+      <h2 class="statement__headline">Already have the basics.<br /><em>Ready to go further.</em></h2>
+      <p class="statement__body">The 111 series is for anyone who has a basic foundation in witchcraft and wants to go deeper into specific areas. If you&#8217;ve completed Witchcraft 101 or already have grounding in the craft and want sourced, structured learning in one area at a time, this is where to go next.</p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.75rem;">
-        <a href="https://themagickmuse.gumroad.com/l/witchcraft101" class="btn btn--primary" target="_blank" rel="noopener">Enroll Now</a>
-        <a href="mastery.html" class="btn btn--outline">Browse Free Guides</a>
+        <a href="https://themagickmuse.gumroad.com/l/witchcraft111" class="btn btn--primary" target="_blank" rel="noopener">Get Early Access</a>
+        <a href="witchcraft101.html" class="btn btn--outline">Start with Witchcraft 101</a>
       </div>
     </div>
   </section>
@@ -287,9 +266,9 @@
   <section class="cta-band">
     <div class="cta-band__overlay"></div>
     <div class="container cta-band__inner">
-      <p class="cta-band__eyebrow">Seven units. Real sources. Your first spell.</p>
-      <h2 class="cta-band__headline">Your practice starts<br /><em>with the right foundation.</em></h2>
-      <a href="https://themagickmuse.gumroad.com/l/witchcraft101" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Start Witchcraft 101</a>
+      <p class="cta-band__eyebrow">Seven courses. Real sources. Your practice, deeper.</p>
+      <h2 class="cta-band__headline">Get early access<br /><em>before launch.</em></h2>
+      <a href="https://themagickmuse.gumroad.com/l/witchcraft111" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Get Early Access</a>
     </div>
   </section>
 
@@ -315,7 +294,6 @@
             <li><a href="manuscript.html">Grimoires</a></li>
             <li><a href="meetup.html">Coven</a></li>
             <li><a href="mastery.html">Blog</a></li>
-      <li><a href="witchcraft101.html">Course</a></li>
             <li><a href="story.html">Our Story</a></li>
           </ul>
         </div>

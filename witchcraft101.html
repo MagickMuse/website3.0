@@ -24,93 +24,6 @@
   <meta name="twitter:title" content="Witchcraft 101 | Beginner Course | The Magick Muse" />
   <meta name="twitter:description" content="A self-paced beginner witchcraft course grounded in published sources. Seven units from what witchcraft is to casting your first spell." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1532543307581-8b01a7ff954f?q=80&w=1200&auto=format&fit=crop" />
-  <style>
-    .units-section {
-      padding: clamp(3rem, 8vw, 5rem) 0;
-      background: var(--ash-mid);
-    }
-    .units-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto;
-      display: grid;
-      gap: 0.85rem;
-      max-width: 680px;
-    }
-    .unit-card {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.25rem;
-      padding: 1.25rem 1.5rem;
-      background: rgba(255, 241, 212, 0.05);
-      border: 1px solid rgba(255, 241, 212, 0.14);
-      border-radius: 4px;
-      transition: border-color 0.2s;
-    }
-    .unit-card:hover {
-      border-color: rgba(255, 241, 212, 0.3);
-    }
-    .unit-card__num {
-      font-family: var(--ff-display);
-      font-size: 1.4rem;
-      color: var(--rose);
-      line-height: 1.2;
-      flex-shrink: 0;
-      min-width: 2.25rem;
-    }
-    .unit-card__title {
-      font-family: var(--ff-serif);
-      font-size: 0.95rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--cream);
-      margin: 0 0 0.35rem;
-    }
-    .unit-card__desc {
-      font-size: 0.9rem;
-      color: var(--cream);
-      opacity: 0.72;
-      margin: 0;
-      line-height: 1.6;
-    }
-    .unit-note {
-      text-align: center;
-      font-family: var(--ff-serif);
-      font-size: 0.82rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--rose);
-      opacity: 0.85;
-      margin-top: 1.75rem;
-    }
-    .how-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-    .how-item {
-      text-align: center;
-      padding: 1.5rem;
-      border: 1px solid rgba(255, 241, 212, 0.12);
-      border-radius: 4px;
-    }
-    .how-item__label {
-      font-family: var(--ff-serif);
-      font-size: 0.75rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--rose);
-      margin-bottom: 0.5rem;
-    }
-    .how-item__text {
-      font-size: 0.92rem;
-      color: var(--cream);
-      opacity: 0.8;
-      line-height: 1.6;
-      margin: 0;
-    }
-  </style>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -325,35 +238,8 @@
       <p><a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; &copy; 2026 The Magick Muse. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
-    });
-    (function(){
-      var navToggle = document.querySelector(".nav__toggle");
-      var navLinks = document.querySelector(".nav__links");
-      var navCta = document.querySelector(".nav > .btn");
-      var ctaAnchor = document.createComment("nav-cta-anchor");
-      if (navCta) navCta.parentNode.insertBefore(ctaAnchor, navCta);
-      navToggle.addEventListener("click", function(){
-        var opening = !navLinks.classList.contains("nav__links--open");
-        navLinks.classList.toggle("nav__links--open");
-        if (!navCta) return;
-        if (opening) {
-          var li = document.createElement("li");
-          li.className = "nav__cta-mobile";
-          li.appendChild(navCta);
-          navLinks.appendChild(li);
-        } else {
-          ctaAnchor.parentNode.insertBefore(navCta, ctaAnchor);
-          var li = navLinks.querySelector(".nav__cta-mobile");
-          if (li) li.remove();
-        }
-      });
-    })();
-  </script>
+  <script src="nav.js" defer></script>
+  <script src="popup.js" defer></script>
   <script src="animations.js" defer></script>
 </body>
 </html>

@@ -22,60 +22,6 @@
     gtag('js', new Date());
     gtag('config', 'G-0DV5GLQV05');
   </script>
-  <style>
-    .error-page {
-      min-height: calc(100vh - 80px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 6rem 1.5rem;
-      text-align: center;
-      background: var(--ash);
-    }
-    .error-page__inner {
-      max-width: 560px;
-    }
-    .error-page__number {
-      font-family: var(--ff-display);
-      font-size: clamp(5rem, 20vw, 10rem);
-      color: var(--wine);
-      line-height: 1;
-      margin: 0 0 0.5rem;
-      opacity: 0.35;
-      letter-spacing: 0.05em;
-    }
-    .error-page__deco {
-      color: var(--wine);
-      font-size: 1rem;
-      letter-spacing: 0.3em;
-      margin-bottom: 1.5rem;
-      opacity: 0.6;
-    }
-    .error-page__title {
-      font-family: var(--ff-display);
-      font-size: clamp(1.5rem, 5vw, 2.25rem);
-      color: var(--cream);
-      margin: 0 0 1rem;
-      font-weight: 400;
-    }
-    .error-page__title em {
-      font-style: italic;
-      color: var(--rose);
-    }
-    .error-page__body {
-      font-family: var(--ff-body);
-      font-size: 1.1rem;
-      color: var(--ash-light);
-      line-height: 1.7;
-      margin: 0 0 2.5rem;
-    }
-    .error-page__actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-  </style>
   <script src="cookie-consent.js" defer></script>
 </head>
 <body>
@@ -141,35 +87,8 @@
       <p><a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; &copy; 2026 The Magick Muse. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
-    });
-    (function(){
-      var navToggle = document.querySelector(".nav__toggle");
-      var navLinks = document.querySelector(".nav__links");
-      var navCta = document.querySelector(".nav > .btn");
-      var ctaAnchor = document.createComment("nav-cta-anchor");
-      if (navCta) navCta.parentNode.insertBefore(ctaAnchor, navCta);
-      navToggle.addEventListener("click", function(){
-        var opening = !navLinks.classList.contains("nav__links--open");
-        navLinks.classList.toggle("nav__links--open");
-        if (!navCta) return;
-        if (opening) {
-          var li = document.createElement("li");
-          li.className = "nav__cta-mobile";
-          li.appendChild(navCta);
-          navLinks.appendChild(li);
-        } else {
-          ctaAnchor.parentNode.insertBefore(navCta, ctaAnchor);
-          var li = navLinks.querySelector(".nav__cta-mobile");
-          if (li) li.remove();
-        }
-      });
-    })();
-  </script>
+  <script src="nav.js" defer></script>
+  <script src="popup.js" defer></script>
   <script src="animations.js" defer></script>
 </body>
 </html>

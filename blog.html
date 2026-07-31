@@ -35,35 +35,6 @@
     gtag('config', 'G-0DV5GLQV05');
   </script>
   <script src="cookie-consent.js" defer></script>
-  <style>
-    .course-callout {
-      background: var(--oxblood);
-      padding: clamp(3rem, 6vw, 5rem) 1.25rem;
-      text-align: center;
-    }
-    .course-callout__eyebrow {
-      font-family: var(--ff-serif);
-      font-size: 0.72rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--blush);
-      margin-bottom: 1rem;
-    }
-    .course-callout__title {
-      font-family: var(--ff-display);
-      font-size: clamp(1.6rem, 4vw, 2.5rem);
-      color: var(--cream);
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-    .course-callout__body {
-      font-family: var(--ff-body);
-      color: var(--blush);
-      max-width: 520px;
-      margin: 0 auto 2rem;
-      line-height: 1.7;
-    }
-  </style>
 </head>
 <body>
   <a class="skip-nav" href="#main-content">Skip to main content</a>
@@ -372,33 +343,6 @@
   </footer>
 
   <script>
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
-    });
-    (function(){
-      var navToggle = document.querySelector(".nav__toggle");
-      var navLinks = document.querySelector(".nav__links");
-      var navCta = document.querySelector(".nav > .btn");
-      var ctaAnchor = document.createComment("nav-cta-anchor");
-      if (navCta) navCta.parentNode.insertBefore(ctaAnchor, navCta);
-      navToggle.addEventListener("click", function(){
-        var opening = !navLinks.classList.contains("nav__links--open");
-        navLinks.classList.toggle("nav__links--open");
-        if (!navCta) return;
-        if (opening) {
-          var li = document.createElement("li");
-          li.className = "nav__cta-mobile";
-          li.appendChild(navCta);
-          navLinks.appendChild(li);
-        } else {
-          ctaAnchor.parentNode.insertBefore(navCta, ctaAnchor);
-          var li = navLinks.querySelector(".nav__cta-mobile");
-          if (li) li.remove();
-        }
-      });
-    })();
-
     const searchInput = document.getElementById('masterySearch');
     const postsGrid = document.getElementById('postsGrid');
     const noResults = document.getElementById('masteryNoResults');
@@ -441,65 +385,8 @@
     }
 
     searchInput.addEventListener('input', applyFilters);
-  </script>
-
-  <!-- EXIT INTENT POPUP -->
-  <div class="popup-overlay" id="exitPopup" role="dialog" aria-modal="true" aria-label="Special offer">
-    <div class="popup">
-      <button class="popup__close" id="popupClose" aria-label="Close">&times;</button>
-      <p class="popup__eyebrow">Before You Go</p>
-      <h2 class="popup__headline">You found us.<br />That's not an accident.</h2>
-      <p class="popup__body">Get 10% off lifetime access to The Magick Manuscript, 15 cross-linked grimoires sourced from published books and built for practitioners who take their craft seriously.</p>
-      <div class="popup__code">SEEKER10</div>
-      <br />
-      <a href="https://themagickmuse.gumroad.com/l/lifetimemanuscript" class="btn btn--primary" target="_blank" rel="noopener" onclick="document.getElementById('exitPopup').classList.remove('popup--visible')">Claim My Discount</a>
-      <p class="popup__fine">Applied at checkout on Gumroad. Lifetime access only.</p>
-    </div>
-  </div>
-
-  <script>
-    (function() {
-      var STORAGE_KEY = 'tmm_popup_seen';
-      if (sessionStorage.getItem(STORAGE_KEY) || localStorage.getItem(STORAGE_KEY)) return;
-
-      var overlay = document.getElementById('exitPopup');
-      var closeBtn = document.getElementById('popupClose');
-
-      function showPopup() {
-        overlay.classList.add('popup--visible');
-        localStorage.setItem(STORAGE_KEY, '1');
-      }
-
-      function closePopup() {
-        overlay.classList.remove('popup--visible');
-      }
-
-      closeBtn.addEventListener('click', closePopup);
-      overlay.addEventListener('click', function(e) {
-        if (e.target === overlay) closePopup();
-      });
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closePopup();
-      });
-
-      // Desktop: exit intent via mouse leaving viewport top
-      var triggered = false;
-      document.addEventListener('mouseleave', function(e) {
-        if (!triggered && e.clientY < 10) {
-          triggered = true;
-          showPopup();
-        }
-      });
-
-      // Mobile fallback: show after 45s if still on page
-      var mobileTimer = setTimeout(function() {
-        if (!triggered) {
-          triggered = true;
-          showPopup();
-        }
-      }, 90000);
-    })();
-  </script>
+  </script>  <script src="nav.js" defer></script>
+  <script src="popup.js" defer></script>
   <script src="animations.js" defer></script>
 </body>
 </html>

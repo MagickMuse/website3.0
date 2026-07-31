@@ -1852,3 +1852,503 @@ ul { list-style: none; }
   .heading-star { display: none; }
   .marquee__track { animation: none; }
 }
+
+
+/* ════════════════════════════════════════
+   PAGE-SPECIFIC STYLES (consolidated)
+   ════════════════════════════════════════ */
+
+/* ── 404.html ── */
+.error-page {
+      min-height: calc(100vh - 80px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 1.5rem;
+      text-align: center;
+      background: var(--ash);
+    }
+    .error-page__inner {
+      max-width: 560px;
+    }
+    .error-page__number {
+      font-family: var(--ff-display);
+      font-size: clamp(5rem, 20vw, 10rem);
+      color: var(--wine);
+      line-height: 1;
+      margin: 0 0 0.5rem;
+      opacity: 0.35;
+      letter-spacing: 0.05em;
+    }
+    .error-page__deco {
+      color: var(--wine);
+      font-size: 1rem;
+      letter-spacing: 0.3em;
+      margin-bottom: 1.5rem;
+      opacity: 0.6;
+    }
+    .error-page__title {
+      font-family: var(--ff-display);
+      font-size: clamp(1.5rem, 5vw, 2.25rem);
+      color: var(--cream);
+      margin: 0 0 1rem;
+      font-weight: 400;
+    }
+    .error-page__title em {
+      font-style: italic;
+      color: var(--rose);
+    }
+    .error-page__body {
+      font-family: var(--ff-body);
+      font-size: 1.1rem;
+      color: var(--ash-light);
+      line-height: 1.7;
+      margin: 0 0 2.5rem;
+    }
+    .error-page__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+/* ── blog.html ── */
+.course-callout {
+      background: var(--oxblood);
+      padding: clamp(3rem, 6vw, 5rem) 1.25rem;
+      text-align: center;
+    }
+    .course-callout__eyebrow {
+      font-family: var(--ff-serif);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--blush);
+      margin-bottom: 1rem;
+    }
+    .course-callout__title {
+      font-family: var(--ff-display);
+      font-size: clamp(1.6rem, 4vw, 2.5rem);
+      color: var(--cream);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .course-callout__body {
+      font-family: var(--ff-body);
+      color: var(--blush);
+      max-width: 520px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+/* ── courses.html ── */
+.courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+      max-width: 860px;
+      margin-inline: auto;
+      margin-block-start: 3rem;
+    }
+    .course-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(255, 241, 212, 0.16);
+      border-radius: 6px;
+      overflow: hidden;
+      transition: border-color 0.25s;
+    }
+    .course-card:hover { border-color: rgba(255, 241, 212, 0.36); }
+    .course-card__img {
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+    .course-card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s;
+    }
+    .course-card:hover .course-card__img img { transform: scale(1.03); }
+    .course-card__body {
+      padding: 1.75rem 1.75rem 2rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .course-card__badge {
+      display: inline-block;
+      font-family: var(--ff-serif);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+      align-self: flex-start;
+    }
+    .course-card__badge--live {
+      background: var(--wine);
+      color: var(--cream);
+    }
+    .course-card__badge--soon {
+      background: rgba(255, 241, 212, 0.1);
+      color: var(--blush);
+      border: 1px solid rgba(255, 241, 212, 0.2);
+    }
+    .course-card__title {
+      font-family: var(--ff-display);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+    .course-card__sub {
+      font-family: var(--ff-serif);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 1rem;
+    }
+    .course-card__desc {
+      font-size: 0.95rem;
+      color: rgba(245, 239, 230, 0.78);
+      line-height: 1.7;
+      margin-bottom: 1.75rem;
+      flex: 1;
+    }
+    .course-card__units {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .course-card__units li {
+      font-size: 0.88rem;
+      color: rgba(245, 239, 230, 0.65);
+      padding-left: 1.1rem;
+      position: relative;
+    }
+    .course-card__units li::before {
+      content: '\2726';
+      position: absolute;
+      left: 0;
+      color: var(--rose);
+      font-size: 0.6rem;
+      top: 0.3em;
+    }
+
+/* ── index.html ── */
+.nav { flex-wrap: wrap; }
+    .announcement-bar {
+      flex: 0 0 100%;
+      order: -1;
+      background: var(--oxblood);
+      color: var(--cream);
+      text-align: center;
+      padding: 0.5rem 1rem;
+      font-family: var(--ff-serif);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+    }
+    .announcement-bar a {
+      color: var(--cream);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .announcement-bar a:hover { opacity: 0.8; }
+
+/* ── links.html ── */
+.links-page {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(2rem, 6vw, 4rem) 1.25rem;
+      overflow: hidden;
+    }
+    .links-page__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .links-page__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .links-page__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(42,31,31,0.78) 0%, rgba(42,31,31,0.88) 100%);
+    }
+    .links-card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 440px;
+      text-align: center;
+    }
+    .links-card__logo {
+      font-family: var(--ff-display);
+      font-size: clamp(2rem, 8vw, 2.75rem);
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .links-card__tagline {
+      font-family: var(--ff-serif);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 2.25rem;
+    }
+    .links-card__deco {
+      color: var(--blush);
+      letter-spacing: 0.5em;
+      font-size: 0.9rem;
+      margin-bottom: 1.75rem;
+    }
+    .link-btn {
+      display: block;
+      width: 100%;
+      padding: 1.05rem 1.5rem;
+      margin-bottom: 1rem;
+      font-family: var(--ff-serif);
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: rgba(255, 241, 212, 0.06);
+      border: 1px solid rgba(255, 241, 212, 0.28);
+      border-radius: 4px;
+      transition: transform 0.25s var(--ease), background 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
+    }
+    .link-btn:hover {
+      background: var(--cream);
+      color: var(--ash);
+      border-color: var(--cream);
+      transform: translateY(-3px);
+    }
+    .link-btn--featured {
+      background: var(--oxblood);
+      border-color: var(--oxblood);
+      color: var(--cream);
+    }
+    .link-btn--featured:hover {
+      background: var(--deep-wine);
+      border-color: var(--deep-wine);
+      color: var(--cream);
+    }
+    .link-btn__sub {
+      display: block;
+      font-family: var(--ff-body);
+      font-size: 0.78rem;
+      letter-spacing: 0;
+      text-transform: none;
+      opacity: 0.75;
+      margin-top: 0.2rem;
+    }
+    .links-card__socials {
+      display: flex;
+      justify-content: center;
+      gap: 1.4rem;
+      margin-top: 2rem;
+    }
+    .links-card__socials img {
+      width: 24px;
+      height: 24px;
+      opacity: 0.8;
+      transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+    }
+    .links-card__socials a:hover img {
+      opacity: 1;
+      transform: translateY(-3px);
+    }
+
+/* ── witchcraft101.html ── */
+.units-section {
+      padding: clamp(3rem, 8vw, 5rem) 0;
+      background: var(--ash-mid);
+    }
+    .units-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      display: grid;
+      gap: 0.85rem;
+      max-width: 680px;
+    }
+    .unit-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      background: rgba(255, 241, 212, 0.05);
+      border: 1px solid rgba(255, 241, 212, 0.14);
+      border-radius: 4px;
+      transition: border-color 0.2s;
+    }
+    .unit-card:hover {
+      border-color: rgba(255, 241, 212, 0.3);
+    }
+    .unit-card__num {
+      font-family: var(--ff-display);
+      font-size: 1.4rem;
+      color: var(--rose);
+      line-height: 1.2;
+      flex-shrink: 0;
+      min-width: 2.25rem;
+    }
+    .unit-card__title {
+      font-family: var(--ff-serif);
+      font-size: 0.95rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin: 0 0 0.35rem;
+    }
+    .unit-card__desc {
+      font-size: 0.9rem;
+      color: var(--cream);
+      opacity: 0.72;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .unit-note {
+      text-align: center;
+      font-family: var(--ff-serif);
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rose);
+      opacity: 0.85;
+      margin-top: 1.75rem;
+    }
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .how-item {
+      text-align: center;
+      padding: 1.5rem;
+      border: 1px solid rgba(255, 241, 212, 0.12);
+      border-radius: 4px;
+    }
+    .how-item__label {
+      font-family: var(--ff-serif);
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 0.5rem;
+    }
+    .how-item__text {
+      font-size: 0.92rem;
+      color: var(--cream);
+      opacity: 0.8;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+/* ── witchcraft111.html ── */
+.coming-soon-badge {
+      display: inline-block;
+      font-family: var(--ff-serif);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ash);
+      background: var(--blush);
+      padding: 0.3rem 0.85rem;
+      border-radius: 2px;
+      margin-bottom: 1.25rem;
+    }
+    .series-section {
+      padding: clamp(3rem, 8vw, 5rem) 0;
+      background: var(--ash-mid);
+    }
+    .series-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 2.5rem;
+      max-width: 900px;
+      margin-inline: auto;
+      margin-block-start: 2.5rem;
+    }
+    .series-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.1rem;
+      padding: 1.25rem 1.4rem;
+      background: rgba(255, 241, 212, 0.05);
+      border: 1px solid rgba(255, 241, 212, 0.14);
+      border-radius: 4px;
+      transition: border-color 0.2s;
+    }
+    .series-card:hover { border-color: rgba(255, 241, 212, 0.3); }
+    .series-card__num {
+      font-family: var(--ff-display);
+      font-size: 1.3rem;
+      color: var(--rose);
+      line-height: 1.2;
+      flex-shrink: 0;
+      min-width: 2rem;
+    }
+    .series-card__title {
+      font-family: var(--ff-serif);
+      font-size: 0.92rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin: 0;
+      line-height: 1.4;
+    }
+    .series-note {
+      text-align: center;
+      font-family: var(--ff-serif);
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rose);
+      opacity: 0.85;
+      margin-top: 1.75rem;
+    }
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .how-item {
+      text-align: center;
+      padding: 1.5rem;
+      border: 1px solid rgba(255, 241, 212, 0.12);
+      border-radius: 4px;
+    }
+    .how-item__label {
+      font-family: var(--ff-serif);
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 0.5rem;
+    }
+    .how-item__text {
+      font-size: 0.92rem;
+      color: var(--cream);
+      opacity: 0.8;
+      line-height: 1.6;
+      margin: 0;
+    }

@@ -24,98 +24,6 @@
   <meta name="twitter:title" content="Witchcraft 111 | Course Series | The Magick Muse" />
   <meta name="twitter:description" content="Seven self-paced beginner units going deeper into the craft: divination, astrology, ancestor veneration, deities, herbalism, runes, and crystals." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200&auto=format&fit=crop" />
-  <style>
-    .coming-soon-badge {
-      display: inline-block;
-      font-family: var(--ff-serif);
-      font-size: 0.72rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--ash);
-      background: var(--blush);
-      padding: 0.3rem 0.85rem;
-      border-radius: 2px;
-      margin-bottom: 1.25rem;
-    }
-    .series-section {
-      padding: clamp(3rem, 8vw, 5rem) 0;
-      background: var(--ash-mid);
-    }
-    .series-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      margin-top: 2.5rem;
-      max-width: 900px;
-      margin-inline: auto;
-      margin-block-start: 2.5rem;
-    }
-    .series-card {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.1rem;
-      padding: 1.25rem 1.4rem;
-      background: rgba(255, 241, 212, 0.05);
-      border: 1px solid rgba(255, 241, 212, 0.14);
-      border-radius: 4px;
-      transition: border-color 0.2s;
-    }
-    .series-card:hover { border-color: rgba(255, 241, 212, 0.3); }
-    .series-card__num {
-      font-family: var(--ff-display);
-      font-size: 1.3rem;
-      color: var(--rose);
-      line-height: 1.2;
-      flex-shrink: 0;
-      min-width: 2rem;
-    }
-    .series-card__title {
-      font-family: var(--ff-serif);
-      font-size: 0.92rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--cream);
-      margin: 0;
-      line-height: 1.4;
-    }
-    .series-note {
-      text-align: center;
-      font-family: var(--ff-serif);
-      font-size: 0.82rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--rose);
-      opacity: 0.85;
-      margin-top: 1.75rem;
-    }
-    .how-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-    }
-    .how-item {
-      text-align: center;
-      padding: 1.5rem;
-      border: 1px solid rgba(255, 241, 212, 0.12);
-      border-radius: 4px;
-    }
-    .how-item__label {
-      font-family: var(--ff-serif);
-      font-size: 0.75rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--rose);
-      margin-bottom: 0.5rem;
-    }
-    .how-item__text {
-      font-size: 0.92rem;
-      color: var(--cream);
-      opacity: 0.8;
-      line-height: 1.6;
-      margin: 0;
-    }
-  </style>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -304,35 +212,8 @@
       <p><a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; &copy; 2026 The Magick Muse. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
-    });
-    (function(){
-      var navToggle = document.querySelector(".nav__toggle");
-      var navLinks = document.querySelector(".nav__links");
-      var navCta = document.querySelector(".nav > .btn");
-      var ctaAnchor = document.createComment("nav-cta-anchor");
-      if (navCta) navCta.parentNode.insertBefore(ctaAnchor, navCta);
-      navToggle.addEventListener("click", function(){
-        var opening = !navLinks.classList.contains("nav__links--open");
-        navLinks.classList.toggle("nav__links--open");
-        if (!navCta) return;
-        if (opening) {
-          var li = document.createElement("li");
-          li.className = "nav__cta-mobile";
-          li.appendChild(navCta);
-          navLinks.appendChild(li);
-        } else {
-          ctaAnchor.parentNode.insertBefore(navCta, ctaAnchor);
-          var li = navLinks.querySelector(".nav__cta-mobile");
-          if (li) li.remove();
-        }
-      });
-    })();
-  </script>
+  <script src="nav.js" defer></script>
+  <script src="popup.js" defer></script>
   <script src="animations.js" defer></script>
 </body>
 </html>

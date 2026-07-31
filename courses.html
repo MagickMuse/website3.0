@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <meta name="google-site-verification" content="sGNCHaN7FyM9XNpVW4JOatRXMUf2DCktar3FvZSES8A" />
+  <meta name="theme-color" content="#1a0a0a" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Witchcraft Courses | The Magick Muse</title>
+  <meta name="description" content="Self-paced witchcraft courses grounded in published sources. Start with the foundations in Witchcraft 101 or go deeper with the 111 series." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cinzel:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Magick Muse" />
+  <meta property="og:title" content="Witchcraft Courses | The Magick Muse" />
+  <meta property="og:description" content="Self-paced witchcraft courses grounded in published sources. Start with the foundations in Witchcraft 101 or go deeper with the 111 series." />
+  <meta property="og:url" content="https://magickmuse.com/courses.html" />
+  <link rel="canonical" href="https://magickmuse.com/courses.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1532543307581-8b01a7ff954f?q=80&w=1200&auto=format&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Witchcraft Courses | The Magick Muse" />
+  <meta name="twitter:description" content="Self-paced witchcraft courses grounded in published sources. Start with the foundations in Witchcraft 101 or go deeper with the 111 series." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1532543307581-8b01a7ff954f?q=80&w=1200&auto=format&fit=crop" />
+  <style>
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+      max-width: 860px;
+      margin-inline: auto;
+      margin-block-start: 3rem;
+    }
+    .course-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(255, 241, 212, 0.16);
+      border-radius: 6px;
+      overflow: hidden;
+      transition: border-color 0.25s;
+    }
+    .course-card:hover { border-color: rgba(255, 241, 212, 0.36); }
+    .course-card__img {
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+    .course-card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s;
+    }
+    .course-card:hover .course-card__img img { transform: scale(1.03); }
+    .course-card__body {
+      padding: 1.75rem 1.75rem 2rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .course-card__badge {
+      display: inline-block;
+      font-family: var(--ff-serif);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+      align-self: flex-start;
+    }
+    .course-card__badge--live {
+      background: var(--wine);
+      color: var(--cream);
+    }
+    .course-card__badge--soon {
+      background: rgba(255, 241, 212, 0.1);
+      color: var(--blush);
+      border: 1px solid rgba(255, 241, 212, 0.2);
+    }
+    .course-card__title {
+      font-family: var(--ff-display);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+    .course-card__sub {
+      font-family: var(--ff-serif);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 1rem;
+    }
+    .course-card__desc {
+      font-size: 0.95rem;
+      color: rgba(245, 239, 230, 0.78);
+      line-height: 1.7;
+      margin-bottom: 1.75rem;
+      flex: 1;
+    }
+    .course-card__units {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .course-card__units li {
+      font-size: 0.88rem;
+      color: rgba(245, 239, 230, 0.65);
+      padding-left: 1.1rem;
+      position: relative;
+    }
+    .course-card__units li::before {
+      content: '&#10022;';
+      position: absolute;
+      left: 0;
+      color: var(--rose);
+      font-size: 0.6rem;
+      top: 0.3em;
+    }
+  </style>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied'});
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DV5GLQV05"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-0DV5GLQV05');
+  </script>
+  <script src="cookie-consent.js" defer></script>
+</head>
+<body>
+  <a class="skip-nav" href="#main-content">Skip to main content</a>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">The Magick Muse</a>
+    <ul class="nav__links">
+      <li><a href="manuscript.html">Grimoires</a></li>
+      <li><a href="meetup.html">Coven</a></li>
+      <li><a href="mastery.html">Blog</a></li>
+      <li><a href="courses.html" class="nav__link--active">Courses</a></li>
+    </ul>
+    <a href="https://themagickmuse.gumroad.com/l/witchcraft101" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Enroll Now</a>
+    <button class="nav__toggle" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1532543307581-8b01a7ff954f?q=80&w=1170&auto=format&fit=crop" alt="" class="page-hero__img" role="presentation" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="page-hero__content">
+      <p class="hero__eyebrow">Self-Paced &bull; Real Sources &bull; Hands-On</p>
+      <h1 class="page-hero__title">The Magick Muse<br /><em>Courses</em></h1>
+      <p class="page-hero__sub">Designed by a practicing teacher and lifelong witch. Built from published sources, not social media.</p>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section class="statement">
+    <div class="container">
+      <div class="courses-grid">
+
+        <!-- WITCHCRAFT 101 -->
+        <div class="course-card">
+          <div class="course-card__img">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1532543307581-8b01a7ff954f?q=80&w=800&auto=format&fit=crop" alt="Witchcraft 101 course" />
+          </div>
+          <div class="course-card__body">
+            <span class="course-card__badge course-card__badge--live">Now Live</span>
+            <h2 class="course-card__title">Witchcraft 101</h2>
+            <p class="course-card__sub">Seven units &bull; Beginner</p>
+            <p class="course-card__desc">Your first complete foundation in the craft. From what witchcraft actually is to casting your first spell, with real understanding behind every step.</p>
+            <ul class="course-card__units">
+              <li>What Is Witchcraft</li>
+              <li>Tools and Altars</li>
+              <li>Correspondences</li>
+              <li>Spiritual Hygiene</li>
+              <li>Shadow Work</li>
+              <li>Spell Preparation</li>
+              <li>Casting a Spell</li>
+            </ul>
+            <a href="witchcraft101.html" class="btn btn--primary">Learn More</a>
+          </div>
+        </div>
+
+        <!-- WITCHCRAFT 111 -->
+        <div class="course-card">
+          <div class="course-card__img">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1532543307581-8b01a7ff954f?q=80&w=800&auto=format&fit=crop" alt="Witchcraft 111 course series" />
+          </div>
+          <div class="course-card__body">
+            <span class="course-card__badge course-card__badge--soon">Coming Soon</span>
+            <h2 class="course-card__title">Witchcraft 111</h2>
+            <p class="course-card__sub">Seven courses &bull; Intermediate</p>
+            <p class="course-card__desc">You have the foundation. Now go deeper. Seven individual courses, each covering one area of the craft in full. Buy individually or get them all.</p>
+            <ul class="course-card__units">
+              <li>Intro to Divination</li>
+              <li>Intro to Astrology</li>
+              <li>Intro to Ancestor Veneration</li>
+              <li>Intro to Deities</li>
+              <li>Intro to Herbalism</li>
+              <li>Intro to Runes</li>
+              <li>Intro to Crystals</li>
+            </ul>
+            <a href="witchcraft111.html" class="btn btn--outline">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">The Magick Muse</p>
+        <p><a href="mailto:TheMagickMuse.co@gmail.com">TheMagickMuse.co@gmail.com</a></p>
+        <div class="social-links" style="margin-top:1rem">
+          <a href="https://www.pinterest.com/themagickmuseco/" target="_blank" rel="noopener" aria-label="Pinterest"><img loading="lazy" src="icons/pinterest.svg" alt="Pinterest" class="social-icon" /></a>
+          <a href="https://www.instagram.com/the_magick_muse/" target="_blank" rel="noopener" aria-label="Instagram"><img loading="lazy" src="icons/instagram.svg" alt="Instagram" class="social-icon" /></a>
+          <a href="https://www.tiktok.com/@the.magick.muse" target="_blank" rel="noopener" aria-label="TikTok"><img loading="lazy" src="icons/tiktok.svg" alt="TikTok" class="social-icon" /></a>
+          <a href="https://themagickmuse.gumroad.com/" target="_blank" rel="noopener" aria-label="Gumroad"><img loading="lazy" src="icons/gumroad.svg" alt="Gumroad" class="social-icon" /></a>
+          <a href="https://discord.com/invite/PBr2BtCpxk" target="_blank" rel="noopener" aria-label="Discord"><img loading="lazy" src="icons/discord.svg" alt="Discord" class="social-icon" /></a>
+        </div>
+      </div>
+      <nav class="footer__nav">
+        <div>
+          <p class="footer__nav-label">Navigate</p>
+          <ul>
+            <li><a href="manuscript.html">Grimoires</a></li>
+            <li><a href="meetup.html">Coven</a></li>
+            <li><a href="mastery.html">Blog</a></li>
+            <li><a href="story.html">Our Story</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__bar">
+      <p><a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; &copy; 2026 The Magick Muse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+    });
+    (function(){
+      var navToggle = document.querySelector(".nav__toggle");
+      var navLinks = document.querySelector(".nav__links");
+      var navCta = document.querySelector(".nav > .btn");
+      var ctaAnchor = document.createComment("nav-cta-anchor");
+      if (navCta) navCta.parentNode.insertBefore(ctaAnchor, navCta);
+      navToggle.addEventListener("click", function(){
+        var opening = !navLinks.classList.contains("nav__links--open");
+        navLinks.classList.toggle("nav__links--open");
+        if (!navCta) return;
+        if (opening) {
+          var li = document.createElement("li");
+          li.className = "nav__cta-mobile";
+          li.appendChild(navCta);
+          navLinks.appendChild(li);
+        } else {
+          ctaAnchor.parentNode.insertBefore(navCta, ctaAnchor);
+          var li = navLinks.querySelector(".nav__cta-mobile");
+          if (li) li.remove();
+        }
+      });
+    })();
+  </script>
+  <script src="animations.js" defer></script>
+</body>
+</html>

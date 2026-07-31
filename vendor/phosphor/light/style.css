@@ -2,9 +2,7 @@
   font-family: "Phosphor-Light";
   src:
     url("./Phosphor-Light.woff2") format("woff2"),
-    url("./Phosphor-Light.woff") format("woff"),
-    url("./Phosphor-Light.ttf") format("truetype"),
-    url("./Phosphor-Light.svg#Phosphor-Light") format("svg");
+    url("./Phosphor-Light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;

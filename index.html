@@ -64,13 +64,16 @@
 }
   </script>
   <style>
+    .nav { flex-wrap: wrap; }
     .announcement-bar {
+      flex: 0 0 100%;
+      order: -1;
       background: var(--oxblood);
       color: var(--cream);
       text-align: center;
-      padding: 0.6rem 1rem;
+      padding: 0.5rem 1rem;
       font-family: var(--ff-serif);
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       letter-spacing: 0.08em;
     }
     .announcement-bar a {
@@ -83,10 +86,10 @@
 </head>
 <body>
   <a class="skip-nav" href="#main-content">Skip to main content</a>
-  <div class="announcement-bar">Witchcraft 101 is now live &mdash; <a href="witchcraft101.html">Start your practice &rarr;</a></div>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
+    <div class="announcement-bar">Witchcraft 101 is now live &mdash; <a href="witchcraft101.html">Start your practice &rarr;</a></div>
     <a href="index.html" class="nav__logo">The Magick Muse</a>
     <ul class="nav__links">
       <li><a href="manuscript.html">Manuscript</a></li>

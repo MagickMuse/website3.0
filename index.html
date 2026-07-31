@@ -361,7 +361,7 @@
       <div class="footer__brand">
         <p class="footer__logo">The Magick Muse</p>
         <p><a href="mailto:TheMagickMuse.co@gmail.com">TheMagickMuse.co@gmail.com</a></p>
-        <div class="social-links" style="margin-top:1rem">
+        <div class="social-links">
           <a href="https://www.pinterest.com/themagickmuseco/" target="_blank" rel="noopener" aria-label="Pinterest"><img loading="lazy" src="icons/pinterest.svg" alt="Pinterest" class="social-icon" /></a>
           <a href="https://www.instagram.com/the_magick_muse/" target="_blank" rel="noopener" aria-label="Instagram"><img loading="lazy" src="icons/instagram.svg" alt="Instagram" class="social-icon" /></a>
           <a href="https://www.tiktok.com/@the.magick.muse" target="_blank" rel="noopener" aria-label="TikTok"><img loading="lazy" src="icons/tiktok.svg" alt="TikTok" class="social-icon" /></a>
@@ -387,35 +387,7 @@
     </div>
   </footer>
 
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.testimonial');
-    const sliderEl = document.getElementById('testimonialsSlider');
-    function showSlide(n) {
-      slides[currentSlide].classList.add('testimonial--hidden');
-      currentSlide = (n + slides.length) % slides.length;
-      slides[currentSlide].classList.remove('testimonial--hidden');
-    }
-
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let autoplayTimer = null;
-    function startAutoplay() {
-      if (reducedMotion || slides.length < 2) return;
-      autoplayTimer = setInterval(() => showSlide(currentSlide + 1), 7000);
-    }
-    function stopAutoplay() {
-      if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
-    }
-    function restartAutoplay() { stopAutoplay(); startAutoplay(); }
-
-    document.getElementById('prevTest').addEventListener('click', () => { showSlide(currentSlide - 1); restartAutoplay(); });
-    document.getElementById('nextTest').addEventListener('click', () => { showSlide(currentSlide + 1); restartAutoplay(); });
-    if (sliderEl) {
-      sliderEl.addEventListener('mouseenter', stopAutoplay);
-      sliderEl.addEventListener('mouseleave', startAutoplay);
-    }
-    startAutoplay();
-  </script>
+  <script src="testimonial.js" defer></script>
   <script src="nav.js" defer></script>
   <script src="popup.js" defer></script>
   <script src="animations.js" defer></script>

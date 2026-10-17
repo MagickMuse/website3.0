@@ -1300,8 +1300,11 @@ ul { list-style: none; }
    MANUSCRIPT PILLARS
    ───────────────────────────────────────────── */
 .manuscript {
-  background: var(--ash);
+  background: var(--cream);
 }
+.manuscript .eyebrow { color: var(--oxblood); }
+.manuscript .section-title { color: var(--ash); }
+.manuscript .section-title em { color: var(--oxblood); }
 .manuscript__inner {
   padding: clamp(2.5rem, 4vw, 4rem) 0;
 }
@@ -1311,7 +1314,7 @@ ul { list-style: none; }
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
   margin-top: 2.5rem;
-  border: 1px solid rgba(245,239,230,0.15);
+  border: 1px solid rgba(42,31,31,0.18);
 }
 
 .pillar {
@@ -1321,29 +1324,29 @@ ul { list-style: none; }
   gap: 1rem;
   align-items: center;
   text-align: center;
-  border-right: 1px solid rgba(245,239,230,0.15);
+  border-right: 1px solid rgba(42,31,31,0.18);
   transition: background 0.3s var(--ease);
 }
 .pillar:last-child { border-right: none; }
-.pillar:hover { background: rgba(139,38,53,0.25); }
+.pillar:hover { background: rgba(106,22,22,0.08); }
 
 .pillar__name {
   font-family: var(--ff-display);
   font-size: clamp(1rem, 1.6vw, 1.35rem);
   font-weight: 400;
   line-height: 1.2;
-  color: var(--cream);
+  color: var(--ash);
 }
 .pillar p {
   font-size: 0.9rem;
-  color: rgba(245,239,230,0.72);
+  color: rgba(42,31,31,0.72);
   line-height: 1.65;
   max-width: 260px;
 }
 
 @media (max-width: 640px) {
   .manuscript__pillars { grid-template-columns: 1fr; }
-  .pillar { border-right: none; border-bottom: 1px solid rgba(245,239,230,0.15); }
+  .pillar { border-right: none; border-bottom: 1px solid rgba(42,31,31,0.18); }
   .pillar:last-child { border-bottom: none; }
 }
 

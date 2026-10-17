@@ -162,7 +162,7 @@ ul { list-style: none; }
   transition: background 0.4s var(--ease), padding 0.4s var(--ease);
 }
 .nav--scrolled {
-  background: rgba(26, 14, 14, 0.95);
+  background: rgba(74, 14, 14, 0.97);
   backdrop-filter: blur(12px);
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -200,7 +200,7 @@ ul { list-style: none; }
     position: absolute;
     top: 100%; left: 0; right: 0;
     flex-direction: column;
-    background: var(--ash);
+    background: var(--oxblood);
     padding: 1.5rem 2rem;
     gap: 1rem;
   }

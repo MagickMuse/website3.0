@@ -5,39 +5,44 @@
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
   <meta name="google-site-verification" content="sGNCHaN7FyM9XNpVW4JOatRXMUf2DCktar3FvZSES8A" />
+  <meta name="theme-color" content="#1a0a0a" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Magick Muse: The Magick Manuscript</title>
-  <meta name="description" content="A living digital grimoire for modern practitioners. 17,400 pages of cross-linked magickal research: crystals, deities, plants, astrology, ritual, tarot, and more." />
+  <title>The Magick Muse | Witchcraft Grimoire & Magickal Research Database</title>
+  <meta name="description" content="A living digital grimoire for modern practitioners. 20,000 pages of cross-linked magickal research: crystals, deities, plants, astrology, ritual, tarot, and more." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Magick Muse" />
-  <meta property="og:title" content="The Magick Muse: The Magick Manuscript" />
-  <meta property="og:description" content="A living digital grimoire for modern practitioners. 17,400 pages of cross-linked magickal research: crystals, deities, plants, astrology, ritual, tarot, and more." />
+  <meta property="og:title" content="The Magick Muse" />
+  <meta property="og:description" content="A living digital grimoire for modern practitioners. 20,000 pages of cross-linked magickal research: crystals, deities, plants, astrology, ritual, tarot, and more." />
   <meta property="og:url" content="https://magickmuse.com/" />
+  <link rel="canonical" href="https://magickmuse.com/" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1606503479977-3568c9d5c94e?q=80&w=1200&auto=format&fit=crop" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Magick Muse: The Magick Manuscript" />
-  <meta name="twitter:description" content="A living digital grimoire for modern practitioners. 17,400 pages of cross-linked magickal research: crystals, deities, plants, astrology, ritual, tarot, and more." />
+  <meta name="twitter:title" content="The Magick Muse" />
+  <meta name="twitter:description" content="A living digital grimoire for modern practitioners. 20,000 pages of cross-linked magickal research: crystals, deities, plants, astrology, ritual, tarot, and more." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1606503479977-3568c9d5c94e?q=80&w=1200&auto=format&fit=crop" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cinzel:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.cdnfonts.com/css/magic-retro" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-  <script src="https://kit.fontawesome.com/a2e0e6b9e9.js" crossorigin="anonymous"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DV5GLQV05"></script>
+  <link rel="stylesheet" href="vendor/phosphor/light/style.css" />
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied'});
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DV5GLQV05"></script>
+  <script>
     gtag('js', new Date());
     gtag('config', 'G-0DV5GLQV05');
   </script>
+  <script src="cookie-consent.js" defer></script>
 </head>
 <body>
+  <a class="skip-nav" href="#main-content">Skip to main content</a>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
-    <a href="#" class="nav__logo">The Magick Muse</a>
+    <a href="index.html" class="nav__logo">The Magick Muse</a>
     <ul class="nav__links">
       <li><a href="manuscript.html">Manuscript</a></li>
       <li><a href="meetup.html">Muses</a></li>
@@ -47,9 +52,11 @@
     <button class="nav__toggle" aria-label="Menu">&#9776;</button>
   </nav>
 
+  <main id="main-content">
+
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero__bg">
+    <div class="hero__bg" aria-hidden="true">
       <video autoplay muted loop playsinline>
         <source src="assets/hero-bg.mp4" type="video/mp4" />
       </video>
@@ -58,8 +65,11 @@
     <div class="hero__content">
       <p class="hero__eyebrow">A Living Digital Grimoire</p>
       <h1 class="hero__headline">The Magick<br /><em>Manuscript</em></h1>
-      <p class="hero__sub">17,400 pages of cross-linked magickal research.<br />One searchable, ever-growing home for your practice.</p>
-      <a href="https://themagickmuse.gumroad.com/l/lifetimemanuscript" class="btn btn--primary" target="_blank" rel="noopener">Get Lifetime Access</a>
+      <p class="hero__sub">One home for everything you're learning, and everything you haven't asked yet.<br />20,000 pages of researched, cross-linked magick, all searchable in one place.</p>
+      <div class="hero__cta-group">
+        <a href="https://themagickmuse.gumroad.com/l/lifetimemanuscript" class="btn btn--primary" target="_blank" rel="noopener">Get Access</a>
+        <a href="manuscript.html" class="btn btn--outline">Peek Inside the Manuscript</a>
+      </div>
     </div>
     <div class="hero__scroll-hint">&#8595; Scroll</div>
   </section>
@@ -98,78 +108,11 @@
     </div>
   </div>
 
-  <!-- BRAND STATEMENT -->
-  <section class="statement">
-    <div class="container statement__inner">
-      <div class="statement__deco" aria-hidden="true">&#10022; &#9737; &#10022;</div>
-      <h2 class="statement__headline">Your practice deserves<br /><em>a proper home.</em></h2>
-      <p class="statement__body">The Magick Manuscript is a living Notion database built for modern practitioners who want reliable, searchable magickal knowledge in one place. It brings correspondences, rituals, entities, plants, symbols, timing, and more into one cross-linked system. Study deeply. Apply confidently.</p>
-      <p class="statement__body">I stopped wishing for something like this to exist and made it myself.</p>
-    </div>
-  </section>
-
-  <!-- ABOUT SPLIT -->
-  <section class="intro" id="about">
-    <div class="intro__image-col">
-      <div class="intro__img-wrap">
-        <img src="https://images.pexels.com/photos/6178714/pexels-photo-6178714.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Books and grimoire research" />
-      </div>
-    </div>
-    <div class="intro__text-col">
-      <p class="eyebrow">behind <em>the manuscript</em></p>
-      <h2 class="section-title">What began as a<br /><em>personal grimoire</em></h2>
-      <p>I'm autistic, and this work became a deep special interest. What started as my own private notes spiralled into something far larger: a meticulously researched, cross-referenced database that reflects the relationships between every aspect of magickal practice.</p>
-      <p>Every entry is drawn from reputable published sources: books by established scholars and practitioners in witchcraft, folklore, and occult studies. The depth of traditional research, made searchable for a modern practice.</p>
-      <p>My husband handles the technical architecture. I handle the research. Together we built the resource we couldn't find anywhere else.</p>
-      <a href="story.html" class="btn btn--outline">Read Our Story</a>
-    </div>
-  </section>
-
-  <!-- THE MANUSCRIPT PILLARS -->
-  <section class="manuscript" id="manuscript">
-    <div class="container">
-      <p class="eyebrow text-center">One Connected Ecosystem</p>
-      <h2 class="section-title text-center">Everything lives<br /><em>inside the Manuscript</em></h2>
-
-      <div class="manuscript__pillars">
-
-        <div class="pillar">
-          <span class="pillar__num">I</span>
-          <h3 class="pillar__name">Magick<br />Manuscript</h3>
-          <p>The living database itself: 15 interconnected grimoires, 17,400 pages of magickal research, updated continuously.</p>
-        </div>
-
-        <div class="pillar">
-          <span class="pillar__num">II</span>
-          <h3 class="pillar__name">Magick<br />Mastery</h3>
-          <p>Guides and educational resources that help you actually use what you're learning. Study deeply, apply confidently.</p>
-        </div>
-
-        <div class="pillar">
-          <span class="pillar__num">III</span>
-          <h3 class="pillar__name">Magick<br />Marketplace</h3>
-          <p>Manuscript access, downloadable templates, and custom spell services. Everything you need to go deeper in your craft.</p>
-        </div>
-
-        <div class="pillar">
-          <span class="pillar__num">IV</span>
-          <h3 class="pillar__name">Magick<br />Muses</h3>
-          <p>A community space for shared practice. Discussion, Discord, and practitioners who take the craft as seriously as you do.</p>
-        </div>
-
-      </div>
-
-      <div class="manuscript__cta">
-        <a href="https://themagickmuse.gumroad.com/l/lifetimemanuscript" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Get Lifetime Access to the Manuscript</a>
-      </div>
-    </div>
-  </section>
-
   <!-- NUMBERS -->
   <section class="numbers">
     <div class="container numbers__grid">
       <div class="numbers__item">
-        <span class="numbers__big">17,400</span>
+        <span class="numbers__big">20,000</span>
         <span class="numbers__label">Total Pages</span>
       </div>
       <div class="numbers__divider"></div>
@@ -179,177 +122,18 @@
       </div>
       <div class="numbers__divider"></div>
       <div class="numbers__item">
-        <span class="numbers__big">168</span>
+        <span class="numbers__big">170+</span>
         <span class="numbers__label">Guide Pages</span>
       </div>
       <div class="numbers__divider"></div>
       <div class="numbers__item">
-        <span class="numbers__big">615</span>
+        <span class="numbers__big">950+</span>
         <span class="numbers__label">Coven Members</span>
       </div>
       <div class="numbers__divider"></div>
       <div class="numbers__item">
-        <span class="numbers__big">160k</span>
-        <span class="numbers__label">Updates</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- GRIMOIRE CATALOG -->
-  <section class="grimoire" id="grimoires">
-    <div class="container">
-      <p class="eyebrow text-center">Inside the Manuscript</p>
-      <h2 class="section-title text-center">15 Grimoires.<br /><em>One searchable system.</em></h2>
-
-      <div class="grimoire__grid">
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-feather"></i><h4>Animal Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>272</strong> pages: animal symbolism, spirit guides &amp; omens</p>
-          </div>
-        </article>
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-planet"></i><h4>Astrology Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>139</strong> pages: planets, signs, houses &amp; aspects</p>
-          </div>
-        </article>
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-cards"></i><h4>Card Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>207</strong> pages: tarot &amp; oracle symbolism, spreads &amp; reversals</p>
-          </div>
-        </article>
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-git-branch"></i><h4>Correspondence Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>1,653</strong> pages: cross-linked correspondences across all categories</p>
-          </div>
-        </article>
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-moon-stars"></i><h4>Dream Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>4,507</strong> pages: symbols, archetypes &amp; interpretation</p>
-          </div>
-        </article>
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-eye"></i><h4>Entity Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>2,200</strong> pages: deities, spirits &amp; beings from diverse traditions</p>
-          </div>
-        </article>
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-key"></i><h4>Material Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>499</strong> pages: candles, fabrics, metals &amp; ritual materials</p>
-          </div>
-        </article>
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-sketch-logo"></i><h4>Mineral Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>737</strong> pages: crystals, stones &amp; minerals with properties &amp; uses</p>
-          </div>
-        </article>
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-drop"></i><h4>Oil Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>270</strong> pages: essential oils, blends &amp; magickal applications</p>
-          </div>
-        </article>
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-leaf"></i><h4>Plant Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>768</strong> pages: herbs, flowers &amp; plants with lore &amp; correspondences</p>
-          </div>
-        </article>
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-flask"></i><h4>Recipe Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>981</strong> pages: spell recipes, brews, incenses &amp; ritual formulas</p>
-          </div>
-        </article>
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-magic-wand"></i><h4>Ritual Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>3,305</strong> pages: structured workings for every intention &amp; occasion</p>
-          </div>
-        </article>
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-scroll"></i><h4>Rune Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>161</strong> pages: Elder Futhark meanings, divination &amp; casting</p>
-          </div>
-        </article>
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-star-four"></i><h4>Symbol Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>449</strong> pages: sigils, sacred geometry &amp; occult symbols</p>
-          </div>
-        </article>
-
-        <article class="grimoire-card">
-          <div class="grimoire-card__body">
-            <div class="grimoire-card__header"><i class="ph-light ph-moon"></i><h4>Timing Grimoire</h4></div>
-            <p class="grimoire-card__tag"><strong>1,252</strong> pages: moon phases, planetary hours, seasons &amp; cycles</p>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PHILOSOPHY SPLIT -->
-  <section class="philosophy" id="philosophy">
-    <div class="philosophy__text-col">
-      <p class="eyebrow">my calling</p>
-      <h2 class="section-title">Built from<br /><em>lived practice</em></h2>
-      <p>My personal practice is rooted in plant work, herbs, candles, tarot, runes, and crystals, with a strong focus on protection magick. Every entry in the Manuscript reflects something I have personally researched and, in most cases, used.</p>
-      <p>This is not a curated aesthetic or a content play. It is a genuine attempt to preserve the depth and reliability of traditional occult scholarship in a format that actually serves a modern practice.</p>
-    </div>
-    <div class="philosophy__img-col">
-      <img src="https://images.pexels.com/photos/11529744/pexels-photo-11529744.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Witch altar with candles, crystals and herbs" />
-    </div>
-  </section>
-
-  <!-- QUOTE -->
-  <blockquote class="pull-quote">
-    <div class="container">
-      <p class="pull-quote__text">"The information within the Magick Manuscript is researched and compiled from reputable published sources, because your practice deserves a foundation you can trust."</p>
-      <cite class="pull-quote__cite">The Magick Muse</cite>
-    </div>
-  </blockquote>
-
-  <!-- FEATURES -->
-  <section class="features">
-    <div class="container">
-      <p class="eyebrow text-center">The Manuscript is for you if:</p>
-      <div class="features__grid">
-        <div class="features__item">
-          <span class="features__icon">&#10022;</span>
-          <p>You are tired of scattered notes, lost bookmarks, and contradictory sources. You want one reliable system for everything.</p>
-        </div>
-        <div class="features__item">
-          <span class="features__icon">&#9737;</span>
-          <p>You want to go deeper. Not surface-level content, but the kind of research that connects astrology to plants to deities to ritual timing.</p>
-        </div>
-        <div class="features__item">
-          <span class="features__icon">&#9790;</span>
-          <p>You practice seriously: whether you are a seasoned witch or a thoughtful beginner who refuses to settle for a Google search.</p>
-        </div>
+        <span class="numbers__big">200k</span>
+        <span class="numbers__label">Additions &amp; Edits</span>
       </div>
     </div>
   </section>
@@ -383,7 +167,7 @@
 
         <div class="testimonial testimonial--hidden" data-slide="3">
           <blockquote>
-            <p>"I have just started scratching the surface and already love your work so much! Something about how everything is SO interlinked makes my 'practically raised by tech' brain so happy — it just feels streamlined!!"</p>
+            <p>"I have just started scratching the surface and already love your work so much! Something about how everything is SO interlinked makes my 'practically raised by tech' brain so happy, it just feels streamlined!!"</p>
             <cite>Blue Moth</cite>
           </blockquote>
         </div>
@@ -396,13 +180,132 @@
     </div>
   </section>
 
+  <!-- BRAND STATEMENT (problem-agitation) -->
+  <section class="statement statement--light">
+    <div class="container statement__inner">
+      <div class="statement__deco" aria-hidden="true">&#10022; &#9737; &#10022;</div>
+      <h2 class="statement__headline">Your practice deserves<br /><em>a proper home.</em></h2>
+      <p class="statement__body">Most practitioners are piecing together their craft from a dozen scattered sources: Reddit threads of uncertain origin, books that contradict each other, notes buried in apps they'll never open again. The knowledge is out there. Getting to it is the problem.</p>
+      <p class="statement__body">The Magick Manuscript is one living Notion database: 15 cross-linked grimoires, every entry sourced from reputable published scholarship, all searchable in one place. I stopped wishing something like this existed and built it myself.</p>
+    </div>
+  </section>
+
+  <!-- GRIMOIRE CATALOG (teaser) -->
+  <section class="grimoire" id="grimoires">
+    <div class="container">
+      <p class="eyebrow text-center">Inside the Manuscript</p>
+      <h2 class="section-title text-center">15 Grimoires.<br /><em>One searchable system.</em></h2>
+      <p class="grimoire__teaser text-center">From crystals and plants to deities, tarot, runes, dreams, rituals, and timing: fifteen cross-linked grimoires spanning 20,000 pages, all searchable in one place.</p>
+      <div class="text-center" style="margin-top:3rem;">
+        <a href="manuscript.html" class="btn btn--primary btn--lg">Explore All 15 Grimoires</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE MANUSCRIPT PILLARS -->
+  <section class="manuscript" id="manuscript">
+    <div class="container manuscript__inner">
+      <p class="eyebrow text-center">One Connected Ecosystem</p>
+      <h2 class="section-title text-center">The Magick Muse<br /><em>offers 3 pillars</em></h2>
+      <div class="manuscript__pillars" role="list" aria-label="The three pillars of The Magick Muse">
+        <a class="pillar" href="manuscript.html" role="listitem">
+          <h3 class="pillar__name">Magick<br />Manuscript</h3>
+          <p>The living database itself: 15 interconnected grimoires, 20,000 pages of magickal research, updated continuously.</p>
+        </a>
+        <a class="pillar" href="mastery.html" role="listitem">
+          <h3 class="pillar__name">Magick<br />Mastery</h3>
+          <p>Guides and educational resources that help you actually use what you're learning. Study deeply, apply confidently.</p>
+        </a>
+        <a class="pillar" href="meetup.html" role="listitem">
+          <h3 class="pillar__name">Magick<br />Muses</h3>
+          <p>A community space for shared practice. Discussion, Discord, and practitioners who take the craft as seriously as you do.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SPLIT -->
+  <section class="intro" id="about">
+    <div class="intro__image-col">
+      <div class="intro__img-wrap">
+        <img src="https://images.pexels.com/photos/6178714/pexels-photo-6178714.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Books and grimoire research" />
+      </div>
+    </div>
+    <div class="intro__text-col">
+      <p class="eyebrow">behind <em>the manuscript</em></p>
+      <h2 class="section-title">What began as a<br /><em>personal grimoire</em></h2>
+      <p>What started as my own private notes spiralled into something far larger: a meticulously researched, cross-referenced database that reflects the relationships between every aspect of magickal practice. I'm neurodivergent, and this work became a deep special interest. I needed to see how every part of the craft connects in order to truly understand it.</p>
+      <p>Every entry is drawn from reputable published sources: books by established scholars and practitioners in witchcraft, folklore, and occult studies. The depth of traditional research, made searchable for a modern practice.</p>
+      <p>My personal practice is rooted in plant work, herbs, candles, tarot, runes, and crystals, with a strong focus on protection magick. Every entry in the Manuscript reflects something I have personally researched and, in most cases, used. My husband handles the technical architecture. I handle the research. Together we built the resource we couldn't find anywhere else.</p>
+      <a href="story.html" class="btn btn--outline">Read Our Story</a>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <blockquote class="pull-quote">
+    <div class="container">
+      <p class="pull-quote__text">The information within the Magick Manuscript is researched and compiled from reputable published sources, because your practice deserves a foundation you can trust.</p>
+    </div>
+  </blockquote>
+
   <!-- CTA BAND -->
   <section class="cta-band" id="cta">
     <div class="cta-band__overlay"></div>
     <div class="container cta-band__inner">
-      <p class="cta-band__eyebrow">A living grimoire. One lifetime price.</p>
-      <h2 class="cta-band__headline">Your practice has been waiting<br />for a resource this <em>serious.</em></h2>
-      <a href="https://themagickmuse.gumroad.com/l/lifetimemanuscript" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Get the Magick Manuscript</a>
+      <p class="cta-band__eyebrow">A living grimoire. One price.</p>
+      <h2 class="cta-band__headline">Your practice has been waiting<br />for a resource this <em>reliable.</em></h2>
+      <a href="https://themagickmuse.gumroad.com/l/lifetimemanuscript" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Get Access</a>
+    </div>
+  </section>
+
+  <!-- FROM THE GRIMOIRE (BLOG) -->
+  <section class="from-grimoire" id="writing">
+    <div class="container">
+      <p class="eyebrow text-center">Magick Mastery</p>
+      <h2 class="section-title text-center">Guides from<br /><em>the Curator</em></h2>
+      <div class="posts__grid">
+
+        <article class="post-card">
+          <div class="post-card__img">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1553986782-9f6de60b51b4?q=80&w=600&auto=format&fit=crop" alt="Protection magick candles and crystals" />
+          </div>
+          <div class="post-card__body">
+            <span class="post-card__tag">Foundations</span>
+            <h3>Protection Magick 101</h3>
+            <p>Protection magick is where every practice should start. Learn the types, when to use them, and how to build protections that hold.</p>
+            <a href="protection-magick-for-beginners.html" class="btn btn--primary btn--sm" aria-label="Read more about Protection Magick 101">Read More</a>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="post-card__img">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1621788901272-bd0fa052e402?q=80&w=600&auto=format&fit=crop" alt="Open grimoire with handwritten notes" />
+          </div>
+          <div class="post-card__body">
+            <span class="post-card__tag">Grimoire</span>
+            <h3>What to Include in Your Grimoire</h3>
+            <p>A breakdown of every section in The Magick Manuscript and why each one earns its place in a serious reference.</p>
+            <a href="what-to-include-in-a-grimoire.html" class="btn btn--primary btn--sm" aria-label="Read more about What to Include in Your Grimoire">Read More</a>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="post-card__img">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1501290741922-b56c0d0884af?q=80&w=600&auto=format&fit=crop" alt="Open book with light streaming through the pages" />
+          </div>
+          <div class="post-card__body">
+            <span class="post-card__tag">Foundations</span>
+            <h3>Finding Trustworthy Witchcraft Information</h3>
+            <p>The witchcraft corner of the internet is full of misinformation. How to tell reliable sources from content that could actually harm your practice.</p>
+            <a href="how-to-find-reliable-witchcraft-information.html" class="btn btn--primary btn--sm" aria-label="Read more about Finding Trustworthy Witchcraft Information">Read More</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="text-center" style="margin-top:3rem;">
+        <a href="mastery.html" class="btn btn--outline">Read All Writing</a>
+      </div>
     </div>
   </section>
 
@@ -420,22 +323,24 @@
   </section>
 
   <!-- FOOTER -->
+  </main>
+
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
         <p class="footer__logo">The Magick Muse</p>
         <p><a href="mailto:TheMagickMuse.co@gmail.com">TheMagickMuse.co@gmail.com</a></p>
         <div class="social-links" style="margin-top:1rem">
-          <a href="https://www.pinterest.com/themagickmuseco/" target="_blank" rel="noopener" aria-label="Pinterest"><img src="https://cdn.simpleicons.org/pinterest/F5EFE6" alt="Pinterest" class="social-icon" /></a>
-          <a href="https://www.instagram.com/the_magick_muse/" target="_blank" rel="noopener" aria-label="Instagram"><img src="https://cdn.simpleicons.org/instagram/F5EFE6" alt="Instagram" class="social-icon" /></a>
-          <a href="https://www.tiktok.com/@the.magick.muse" target="_blank" rel="noopener" aria-label="TikTok"><img src="https://cdn.simpleicons.org/tiktok/F5EFE6" alt="TikTok" class="social-icon" /></a>
-          <a href="https://themagickmuse.gumroad.com/" target="_blank" rel="noopener" aria-label="Gumroad"><img src="https://cdn.simpleicons.org/gumroad/F5EFE6" alt="Gumroad" class="social-icon" /></a>
-          <a href="https://discord.com/invite/PBr2BtCpxk" target="_blank" rel="noopener" aria-label="Discord"><img src="https://cdn.simpleicons.org/discord/F5EFE6" alt="Discord" class="social-icon" /></a>
+          <a href="https://www.pinterest.com/themagickmuseco/" target="_blank" rel="noopener" aria-label="Pinterest"><img loading="lazy" src="icons/pinterest.svg" alt="Pinterest" class="social-icon" /></a>
+          <a href="https://www.instagram.com/the_magick_muse/" target="_blank" rel="noopener" aria-label="Instagram"><img loading="lazy" src="icons/instagram.svg" alt="Instagram" class="social-icon" /></a>
+          <a href="https://www.tiktok.com/@the.magick.muse" target="_blank" rel="noopener" aria-label="TikTok"><img loading="lazy" src="icons/tiktok.svg" alt="TikTok" class="social-icon" /></a>
+          <a href="https://themagickmuse.gumroad.com/" target="_blank" rel="noopener" aria-label="Gumroad"><img loading="lazy" src="icons/gumroad.svg" alt="Gumroad" class="social-icon" /></a>
+          <a href="https://discord.com/invite/PBr2BtCpxk" target="_blank" rel="noopener" aria-label="Discord"><img loading="lazy" src="icons/discord.svg" alt="Discord" class="social-icon" /></a>
         </div>
       </div>
       <nav class="footer__nav">
         <div>
-          <h5>Navigate</h5>
+          <p class="footer__nav-label">Navigate</p>
           <ul>
             <li><a href="manuscript.html">Manuscript</a></li>
             <li><a href="meetup.html">Muses</a></li>
@@ -446,7 +351,7 @@
       </nav>
     </div>
     <div class="footer__bar">
-      <p>&copy; 2026 The Magick Muse. All rights reserved.</p>
+      <p><a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; &copy; 2026 The Magick Muse. All rights reserved.</p>
     </div>
   </footer>
 
@@ -456,19 +361,56 @@
       nav.classList.toggle('nav--scrolled', window.scrollY > 60);
     });
 
-    document.querySelector('.nav__toggle').addEventListener('click', () => {
-      document.querySelector('.nav__links').classList.toggle('nav__links--open');
-    });
+    (function(){
+      var navToggle = document.querySelector(".nav__toggle");
+      var navLinks = document.querySelector(".nav__links");
+      var navCta = document.querySelector(".nav > .btn");
+      var ctaAnchor = document.createComment("nav-cta-anchor");
+      if (navCta) navCta.parentNode.insertBefore(ctaAnchor, navCta);
+      navToggle.addEventListener("click", function(){
+        var opening = !navLinks.classList.contains("nav__links--open");
+        navLinks.classList.toggle("nav__links--open");
+        if (!navCta) return;
+        if (opening) {
+          var li = document.createElement("li");
+          li.className = "nav__cta-mobile";
+          li.appendChild(navCta);
+          navLinks.appendChild(li);
+        } else {
+          ctaAnchor.parentNode.insertBefore(navCta, ctaAnchor);
+          var li = navLinks.querySelector(".nav__cta-mobile");
+          if (li) li.remove();
+        }
+      });
+    })();
 
     let currentSlide = 0;
     const slides = document.querySelectorAll('.testimonial');
+    const sliderEl = document.getElementById('testimonialsSlider');
     function showSlide(n) {
       slides[currentSlide].classList.add('testimonial--hidden');
       currentSlide = (n + slides.length) % slides.length;
       slides[currentSlide].classList.remove('testimonial--hidden');
     }
-    document.getElementById('prevTest').addEventListener('click', () => showSlide(currentSlide - 1));
-    document.getElementById('nextTest').addEventListener('click', () => showSlide(currentSlide + 1));
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let autoplayTimer = null;
+    function startAutoplay() {
+      if (reducedMotion || slides.length < 2) return;
+      autoplayTimer = setInterval(() => showSlide(currentSlide + 1), 7000);
+    }
+    function stopAutoplay() {
+      if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
+    }
+    function restartAutoplay() { stopAutoplay(); startAutoplay(); }
+
+    document.getElementById('prevTest').addEventListener('click', () => { showSlide(currentSlide - 1); restartAutoplay(); });
+    document.getElementById('nextTest').addEventListener('click', () => { showSlide(currentSlide + 1); restartAutoplay(); });
+    if (sliderEl) {
+      sliderEl.addEventListener('mouseenter', stopAutoplay);
+      sliderEl.addEventListener('mouseleave', startAutoplay);
+    }
+    startAutoplay();
   </script>
 
   <!-- EXIT INTENT POPUP -->
@@ -477,11 +419,11 @@
       <button class="popup__close" id="popupClose" aria-label="Close">&times;</button>
       <p class="popup__eyebrow">Before You Go</p>
       <h2 class="popup__headline">You found us.<br />That's not an accident.</h2>
-      <p class="popup__body">Get 10% off lifetime access to The Magick Manuscript, 15 cross-linked grimoires sourced from published books and built for practitioners who take their craft seriously.</p>
+      <p class="popup__body">Get 10% off access to The Magick Manuscript, 15 cross-linked grimoires sourced from published books and built for practitioners who take their craft seriously.</p>
       <div class="popup__code">SEEKER10</div>
       <br />
       <a href="https://themagickmuse.gumroad.com/l/lifetimemanuscript" class="btn btn--primary" target="_blank" rel="noopener" onclick="document.getElementById('exitPopup').classList.remove('popup--visible')">Claim My Discount</a>
-      <p class="popup__fine">Applied at checkout on Gumroad. Lifetime access only.</p>
+      <p class="popup__fine">Applied at checkout on Gumroad. Applied at checkout on Gumroad.</p>
     </div>
   </div>
 
@@ -492,14 +434,18 @@
 
       var overlay = document.getElementById('exitPopup');
       var closeBtn = document.getElementById('popupClose');
+      var lastFocused = null;
 
       function showPopup() {
+        lastFocused = document.activeElement;
         overlay.classList.add('popup--visible');
         localStorage.setItem(STORAGE_KEY, '1');
+        closeBtn.focus();
       }
 
       function closePopup() {
         overlay.classList.remove('popup--visible');
+        if (lastFocused && lastFocused.focus) lastFocused.focus();
       }
 
       closeBtn.addEventListener('click', closePopup);
@@ -507,7 +453,20 @@
         if (e.target === overlay) closePopup();
       });
       document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closePopup();
+        if (!overlay.classList.contains('popup--visible')) return;
+        if (e.key === 'Escape') { closePopup(); return; }
+        // Trap focus within the popup while it is open
+        if (e.key === 'Tab') {
+          var focusable = overlay.querySelectorAll('button, a[href]');
+          if (!focusable.length) return;
+          var first = focusable[0];
+          var last = focusable[focusable.length - 1];
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault(); last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault(); first.focus();
+          }
+        }
       });
 
       // Desktop: exit intent via mouse leaving viewport top
@@ -519,14 +478,15 @@
         }
       });
 
-      // Mobile fallback: show after 45s if still on page
-      var mobileTimer = setTimeout(function() {
+      // Mobile fallback: show after 90s if still on page
+      setTimeout(function() {
         if (!triggered) {
           triggered = true;
           showPopup();
         }
-      }, 45000);
+      }, 90000);
     })();
   </script>
+  <script src="animations.js" defer></script>
 </body>
 </html>

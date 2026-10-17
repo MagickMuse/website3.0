@@ -5,34 +5,39 @@
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
   <meta name="google-site-verification" content="sGNCHaN7FyM9XNpVW4JOatRXMUf2DCktar3FvZSES8A" />
+  <meta name="theme-color" content="#1a0a0a" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Story: The Magick Muse</title>
+  <title>Our Story | The Magick Muse</title>
   <meta name="description" content="How The Magick Manuscript was built: a personal grimoire that became a living database for serious practitioners." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cinzel:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.cdnfonts.com/css/magic-retro" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="The Magick Muse" />
   <meta property="og:title" content="Our Story | The Magick Muse" />
   <meta property="og:description" content="How The Magick Muse and The Magick Manuscript came to be." />
   <meta property="og:url" content="https://magickmuse.com/story.html" />
+  <link rel="canonical" href="https://magickmuse.com/story.html" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1606503479977-3568c9d5c94e?q=80&w=1200&auto=format&fit=crop" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Our Story | The Magick Muse" />
   <meta name="twitter:description" content="How The Magick Muse and The Magick Manuscript came to be." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1606503479977-3568c9d5c94e?q=80&w=1200&auto=format&fit=crop" />
-  <script src="https://kit.fontawesome.com/a2e0e6b9e9.js" crossorigin="anonymous"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DV5GLQV05"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied'});
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DV5GLQV05"></script>
+  <script>
     gtag('js', new Date());
     gtag('config', 'G-0DV5GLQV05');
   </script>
+  <script src="cookie-consent.js" defer></script>
 </head>
 <body>
+  <a class="skip-nav" href="#main-content">Skip to main content</a>
 
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo">The Magick Muse</a>
@@ -45,10 +50,12 @@
     <button class="nav__toggle" aria-label="Menu">&#9776;</button>
   </nav>
 
+  <main id="main-content">
+
   <!-- PAGE HERO -->
   <section class="page-hero">
-    <div class="hero__bg">
-      <img src="https://images.unsplash.com/photo-1715571527459-84b49e550d2c?q=80&w=1170&auto=format&fit=crop" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+    <div class="hero__bg" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1715571527459-84b49e550d2c?q=80&w=1170&auto=format&fit=crop" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"  role="presentation"/>
       <div class="hero__overlay"></div>
     </div>
     <div class="page-hero__content">
@@ -73,7 +80,7 @@
     <div class="container statement__inner">
       <div class="statement__deco" aria-hidden="true">&#10022; &#9737; &#10022;</div>
       <h2 class="statement__headline">Building the<br /><em>Manuscript System</em></h2>
-      <p class="statement__body">What began as my personal grimoire slowly evolved into something much larger. I'm autistic, and this work quickly became a deep special interest. Because of the way my brain works, I needed to see how different aspects of magick connect and interact in order to fully understand them. The Magick Manuscript was built to reflect those relationships through careful organization and cross-referencing, which is why you'll notice a high level of detail, structure, and interconnected entries throughout the grimoire.</p>
+      <p class="statement__body">What began as my personal grimoire slowly evolved into something much larger. I'm neurodivergent, and this work quickly became a deep special interest. Because of the way my brain works, I needed to see how different aspects of magick connect and interact in order to fully understand them. The Magick Manuscript was built to reflect those relationships through careful organization and cross-referencing, which is why you'll notice a high level of detail, structure, and interconnected entries throughout the grimoire.</p>
       <p class="statement__body">As a teacher, sharing what I know is only natural to me. I wanted to create a living library that feels both scholarly and practical. For years I found myself digging through stacks of books trying to remember which book and which page held the information I needed. Being able to press Ctrl+F in my own grimoire instead of flipping through dozens of pages became a huge advantage, especially during rituals and spellwork.</p>
     </div>
   </section>
@@ -103,28 +110,30 @@
   <section class="cta-band">
     <div class="cta-band__overlay"></div>
     <div class="container cta-band__inner">
-      <p class="cta-band__eyebrow">A living grimoire. One lifetime price.</p>
+      <p class="cta-band__eyebrow">A living grimoire. One price.</p>
       <h2 class="cta-band__headline">Ready to go deeper<br />into your <em>practice?</em></h2>
       <a href="https://themagickmuse.gumroad.com/l/lifetimemanuscript" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Get the Magick Manuscript</a>
     </div>
   </section>
 
+  </main>
+
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
         <p class="footer__logo">The Magick Muse</p>
-        <p><a href="mailto:magickmuse.com@gmail.com">magickmuse.com@gmail.com</a></p>
+        <p><a href="mailto:TheMagickMuse.co@gmail.com">TheMagickMuse.co@gmail.com</a></p>
         <div class="social-links" style="margin-top:1rem">
-          <a href="https://www.pinterest.com/themagickmuseco/" target="_blank" rel="noopener" aria-label="Pinterest"><img src="https://cdn.simpleicons.org/pinterest/F5EFE6" alt="Pinterest" class="social-icon" /></a>
-          <a href="https://www.instagram.com/the_magick_muse/" target="_blank" rel="noopener" aria-label="Instagram"><img src="https://cdn.simpleicons.org/instagram/F5EFE6" alt="Instagram" class="social-icon" /></a>
-          <a href="https://www.tiktok.com/@the.magick.muse" target="_blank" rel="noopener" aria-label="TikTok"><img src="https://cdn.simpleicons.org/tiktok/F5EFE6" alt="TikTok" class="social-icon" /></a>
-          <a href="https://themagickmuse.gumroad.com/" target="_blank" rel="noopener" aria-label="Gumroad"><img src="https://cdn.simpleicons.org/gumroad/F5EFE6" alt="Gumroad" class="social-icon" /></a>
-          <a href="https://discord.com/invite/PBr2BtCpxk" target="_blank" rel="noopener" aria-label="Discord"><img src="https://cdn.simpleicons.org/discord/F5EFE6" alt="Discord" class="social-icon" /></a>
+          <a href="https://www.pinterest.com/themagickmuseco/" target="_blank" rel="noopener" aria-label="Pinterest"><img loading="lazy" src="icons/pinterest.svg" alt="Pinterest" class="social-icon" /></a>
+          <a href="https://www.instagram.com/the_magick_muse/" target="_blank" rel="noopener" aria-label="Instagram"><img loading="lazy" src="icons/instagram.svg" alt="Instagram" class="social-icon" /></a>
+          <a href="https://www.tiktok.com/@the.magick.muse" target="_blank" rel="noopener" aria-label="TikTok"><img loading="lazy" src="icons/tiktok.svg" alt="TikTok" class="social-icon" /></a>
+          <a href="https://themagickmuse.gumroad.com/" target="_blank" rel="noopener" aria-label="Gumroad"><img loading="lazy" src="icons/gumroad.svg" alt="Gumroad" class="social-icon" /></a>
+          <a href="https://discord.com/invite/PBr2BtCpxk" target="_blank" rel="noopener" aria-label="Discord"><img loading="lazy" src="icons/discord.svg" alt="Discord" class="social-icon" /></a>
         </div>
       </div>
       <nav class="footer__nav">
         <div>
-          <h5>Navigate</h5>
+          <p class="footer__nav-label">Navigate</p>
           <ul>
             <li><a href="manuscript.html">Manuscript</a></li>
             <li><a href="meetup.html">Muses</a></li>
@@ -135,7 +144,7 @@
       </nav>
     </div>
     <div class="footer__bar">
-      <p>&copy; 2026 The Magick Muse. All rights reserved.</p>
+      <p><a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; &copy; 2026 The Magick Muse. All rights reserved.</p>
     </div>
   </footer>
 
@@ -144,9 +153,28 @@
     window.addEventListener('scroll', () => {
       nav.classList.toggle('nav--scrolled', window.scrollY > 60);
     });
-    document.querySelector('.nav__toggle').addEventListener('click', () => {
-      document.querySelector('.nav__links').classList.toggle('nav__links--open');
-    });
+    (function(){
+      var navToggle = document.querySelector(".nav__toggle");
+      var navLinks = document.querySelector(".nav__links");
+      var navCta = document.querySelector(".nav > .btn");
+      var ctaAnchor = document.createComment("nav-cta-anchor");
+      if (navCta) navCta.parentNode.insertBefore(ctaAnchor, navCta);
+      navToggle.addEventListener("click", function(){
+        var opening = !navLinks.classList.contains("nav__links--open");
+        navLinks.classList.toggle("nav__links--open");
+        if (!navCta) return;
+        if (opening) {
+          var li = document.createElement("li");
+          li.className = "nav__cta-mobile";
+          li.appendChild(navCta);
+          navLinks.appendChild(li);
+        } else {
+          ctaAnchor.parentNode.insertBefore(navCta, ctaAnchor);
+          var li = navLinks.querySelector(".nav__cta-mobile");
+          if (li) li.remove();
+        }
+      });
+    })();
   </script>
 
   <!-- EXIT INTENT POPUP -->
@@ -155,11 +183,11 @@
       <button class="popup__close" id="popupClose" aria-label="Close">&times;</button>
       <p class="popup__eyebrow">Before You Go</p>
       <h2 class="popup__headline">You found us.<br />That's not an accident.</h2>
-      <p class="popup__body">Get 10% off lifetime access to The Magick Manuscript, 15 cross-linked grimoires sourced from published books and built for practitioners who take their craft seriously.</p>
+      <p class="popup__body">Get 10% off access to The Magick Manuscript, 15 cross-linked grimoires sourced from published books and built for practitioners who take their craft seriously.</p>
       <div class="popup__code">SEEKER10</div>
       <br />
       <a href="https://themagickmuse.gumroad.com/l/lifetimemanuscript" class="btn btn--primary" target="_blank" rel="noopener" onclick="document.getElementById('exitPopup').classList.remove('popup--visible')">Claim My Discount</a>
-      <p class="popup__fine">Applied at checkout on Gumroad. Lifetime access only.</p>
+      <p class="popup__fine">Applied at checkout on Gumroad. Applied at checkout on Gumroad.</p>
     </div>
   </div>
 
@@ -203,8 +231,9 @@
           triggered = true;
           showPopup();
         }
-      }, 45000);
+      }, 90000);
     })();
   </script>
+  <script src="animations.js" defer></script>
 </body>
 </html>

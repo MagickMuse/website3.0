@@ -418,9 +418,11 @@ ul { list-style: none; }
 .intro {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  max-height: 360px;
 }
 .intro__image-col {
   overflow: hidden;
+  max-height: 360px;
 }
 .intro__img-wrap {
   width: 100%;

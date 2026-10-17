@@ -417,8 +417,7 @@ ul { list-style: none; }
    ───────────────────────────────────────────── */
 .intro {
   display: grid;
-  grid-template-columns: 2fr 3fr;
-  min-height: 420px;
+  grid-template-columns: 1fr 2fr;
 }
 .intro__image-col {
   overflow: hidden;
@@ -438,7 +437,7 @@ ul { list-style: none; }
   padding: clamp(1.4rem, 2.8vw, 2.8rem);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.65rem;
   font-size: 0.85rem;
 }

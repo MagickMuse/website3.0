@@ -1232,13 +1232,13 @@ ul { list-style: none; }
    ───────────────────────────────────────────── */
 .footer {
   background: var(--deep-wine);
-  padding-top: clamp(3rem, 5vw, 5rem);
+  padding-top: clamp(1rem, 1.8vw, 1.75rem);
 }
 .footer__inner {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: var(--gap);
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 .footer__logo {
   font-family: var(--ff-display);
@@ -1251,7 +1251,7 @@ ul { list-style: none; }
 .footer__tagline {
   font-size: 0.85rem;
   color: rgba(245,239,230,0.55);
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
 }
 .footer__tagline em { font-style: italic; color: var(--blush); }
 .footer__brand p { color: rgba(245,239,230,0.55); font-size: 0.85rem; margin-bottom: 0.3rem; }
@@ -1261,7 +1261,7 @@ ul { list-style: none; }
 .footer__nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 1rem;
 }
 .footer__nav h5 {
   font-family: var(--ff-serif);

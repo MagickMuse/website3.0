@@ -1449,7 +1449,8 @@ ul { list-style: none; }
   position: relative;
 }
 .post-card:hover { transform: translateY(-4px); cursor: pointer; }
-.post-card__body .btn--ghost::after {
+.post-card__body .btn--ghost::after,
+.post-card__body .btn--primary::after {
   content: '';
   position: absolute;
   inset: 0;

@@ -478,7 +478,7 @@ ul { list-style: none; }
 }
 .steps__num {
   display: block;
-  font-family: var(--ff-display);
+  font-family: var(--ff-serif);
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   color: var(--blush);
@@ -693,7 +693,10 @@ ul { list-style: none; }
   flex-shrink: 0;
   line-height: 1;
 }
+.grimoire-card__header h3,
 .grimoire-card__header h4 { margin-bottom: 0; }
+.grimoire-card__header h3,
+.grimoire-card__body h3,
 .grimoire-card__body h4 {
   font-family: var(--ff-serif);
   font-size: 0.85rem;
@@ -1253,6 +1256,7 @@ ul { list-style: none; }
   margin-bottom: 0.4rem;
 }
 .footer__tagline {
+  font-family: var(--ff-body);
   font-size: 0.85rem;
   color: rgba(245,239,230,0.55);
   margin-bottom: 0.4rem;
@@ -1277,6 +1281,7 @@ ul { list-style: none; }
 }
 .footer__nav ul { display: flex; flex-direction: column; gap: 0.5rem; }
 .footer__nav a {
+  font-family: var(--ff-body);
   font-size: 0.88rem;
   color: rgba(245,239,230,0.65);
   transition: color 0.2s;
@@ -1676,9 +1681,9 @@ ul { list-style: none; }
   color: var(--blush);
 }
 .related-card__title {
-  font-family: var(--ff-serif);
+  font-family: var(--ff-display);
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--cream);
   line-height: 1.4;
 }
